@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(85, 83, 83);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/*Here starts the nav*/
+nav {
+    overflow: hidden;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(185, 91, 91);
+    padding-right: 10px;
+    margin-bottom: 5em;
+    border-radius: 0.3em;
+    width: 100%;
+    position: static;
+}
+
+nav ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a, nav ul li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    padding: 1.1em;
+
+}
+
+nav a:hover {
+    background-color: rgb(150, 75, 75);
+    border-radius: 20px;
+}
+
+.active {
+    background-color: rgb(150, 75, 75);
+    border-radius: 0.5em;
+}
+/*Here ends the nav*/
+
+
+/*Here begins the main body*/
+main {
+    margin-top: 5em;
+}
+
+
+/*Top part of the main*/
+.top {
+    background-color: rgb(192, 127, 127);
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border-radius: 10px;
+}
+
+.top aside {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    width: 30%;
+    padding-bottom: 3em;
+    padding-right: 1em;
+    font-weight: 700;
+}
+
+.top section {
+    display: flex;
+    text-align: justify;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 1em;
+    font-weight: 400;
+
+}
+
+p {
+    padding: 1em ;
+}
+/*Here ends the main body*/
+
+
+/*Here begins the footer of the page*/
+footer {
+    background-color: rgb(185, 91, 91);
+    position: fixed;
+    bottom: 0;
+    max-width: 1100px;
+    width: 100%;
+    padding-right: 10px;
+    
+}
+
+footer h4 {
+    padding: 5px;
+    display: block;
+}
+
+footer li, a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: thistle;
+
+}
