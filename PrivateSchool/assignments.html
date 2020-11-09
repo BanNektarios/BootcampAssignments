@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/privateSchool.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script src="js/privateSchool.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="_img/logo.png" alt="School Logo" width="80px">
+            <a href="privateSchool.html">Home</a>
+            <ul>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a class="active" href="assignments.html">Assignments</a></li>
+                <li><a href="trainer.html">Trainers</a></li>
+            </ul>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+    <div class="container">
+        
+        <main>
+            <form>
+                <h3>Manage the Assignments</h3>
+                <div class="form-group">
+                    <label for="assignmentTitle">Assignment Title</label>
+                    <input type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
+                    
+                <div class="form-group">
+                    <label for="assignmentDescription">Assignment Description</label>
+                    <textarea name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="assignmentSubDate">Assignment Submission Date</label>
+                    <input type="date" name="assignmentSubDate" id="assignmentSubDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="assignmentOralMark">Assignment Oral Mark</label>
+                    <input type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="assignmentTotalMark">Assignment Total Mark</label>
+                    <input type="number" name="assignmentTotalMark" id="assignmentOralMark" min="0" maxlength="100">
+                </div>
+                
+            </form>
+        </main>
+        <footer>
+            <h4>Webpage Navigation</h4>
+                <hr>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Assignments</a></li>
+                </ul>
+
+            </div>
+        </footer>
+</div>
+</body>
+</html>
