@@ -4,68 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/privateSchool.css">
     <link rel="stylesheet" href="css/forms.css">
     <script src="js/privateSchool.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <img id="logo" src="_img/logo.png" alt="School Logo" width="80px">
-            <a href="privateSchool.html">Home</a>
-            <ul>
-                <li><a class="active" href="courses.html">Courses</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="trainer.html">Trainers</a></li>
-            </ul>
-            <a href="#">Sign In</a>
-        </nav>
-    </header>
     <div class="container">
-        
+        <header>
+            <nav>
+                <img id="logo" src="_img/logo.png" alt="School Logo" width="80px">
+                <a href="privateSchool.html">Home</a>
+                <ul>
+                    <li><a class="active" href="courses.html">Courses</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Assignments</a></li>
+                </ul>
+                <a href="#">Sign In</a>
+            </nav>
+        </header>
         <main>
             <form>
-                <h3>Manage the Courses</h3>
+                <h3>Browse the Courses</h3>
+                <hr>
                 <div class="form-group">
                     <label for="title">Course Title</label>
                     <select name="courses" id="titles">
                         <option value="choose">Choose...</option>
-                        <option value="en">English</option>
+                        <option value="eng">English</option>
                         <option value="chem">Chemistry</option>
                         <option value="phil">Philosophy</option>
-                        <option value="phil">Algorithms</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="stream">Course Stream</label>
                     <select name="courses" id="stream">
                         <option value="choose">Choose...</option>
-                        <option value="csEng">Computer Science Engineering</option>
-                        <option value="chemEng">Chemistry Engineering</option>
-                        <option value="humanities">Humanities</option>
+                        <option value="eng">English</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="phil">Philosophy</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="type">Course Type</label>
                     <select name="courses" id="type">
                         <option value="choose">Choose...</option>
-                        <option value="diplomaHigh">Diploma of Higher Education</option>
-                        <option value="honorsProg">Honors Program</option>
-                        <option value="shortCourses">Short Courses</option>
+                        <option value="eng">English</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="phil">Philosophy</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="start_date">Course Start-Date</label>
-                    <input type="date" name="start_date" id="start_date">
+                    <select name="courses" id="start_date">
+                        <option value="choose">Choose...</option>
+                        <option value="eng">English</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="phil">Philosophy</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="end_date">Course End-Date</label>
-                    <input type="date" name="end_date" id="end_date">
+                    <select name="courses" id="end_date">
+                        <option value="choose">Choose...</option>
+                        <option value="eng">English</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="phil">Philosophy</option>
+                    </select>
                 </div>
-
                 
             </form>
         </main>
