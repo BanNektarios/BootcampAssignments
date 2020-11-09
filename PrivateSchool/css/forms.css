@@ -1,8 +1,11 @@
+/* --This a CSS Page only for the forms-- */
+
 form {
     border: 5px solid rgb(80, 46, 46);
     border-radius: 10px;
     max-width: 600px;
-    margin: auto;
+    width: 100%;
+    margin: 150px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -15,6 +18,7 @@ h3 {
     margin: 1em;
     font-size: 1.3em;
     text-align: center;
+    border-bottom: 1px solid grey;
 }
 
 label {
@@ -23,7 +27,8 @@ label {
     font-size: 1.3em;
 }
 
-select {
+select, input, textarea {
     margin: 1em;
 }
+
  
