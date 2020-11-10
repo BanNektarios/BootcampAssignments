@@ -318,7 +318,7 @@ p {
 }
 
 .botItems {
-	background-color: rgb(43, 40, 40);
+	background-color: rgb(56, 53, 53);
     margin: 2em;
     padding: 2em;
     border-radius: 10px;
@@ -347,7 +347,7 @@ p {
   }
 
 .botItems a {
-    background-color: rebeccapurple;
+    background-color: rgb(146, 126, 167);
     margin-left: 0.8em;
     padding: 13px;
     border-radius: 10px;
