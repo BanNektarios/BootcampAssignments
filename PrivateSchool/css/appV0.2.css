@@ -53,6 +53,7 @@ table {
 
 html {
     font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
 
 }
 
@@ -167,7 +168,8 @@ footer {
     bottom: 100;
     max-width: 1100px;
     width: 100%;
-	padding-right: 10px;
+    padding-right: 10px;
+    margin-top: 200px;
 }
 
 footer h4 {
@@ -269,7 +271,7 @@ main section{
 
 
 /* ------Top part of the main----- */
-.mainTop {
+.top {
     background-color: rgb(192, 127, 127);
     display: flex;
     margin-top: 10em;
@@ -277,7 +279,7 @@ main section{
     border-radius: 10px;
 }
 
-.mainTop aside {
+.top aside {
     display: flex;
     justify-content: center;
     text-align: justify;
@@ -288,7 +290,7 @@ main section{
     font-weight: 700;
 }
 
-.mainTop section {
+.top section {
     display: flex;
     text-align: justify;
     justify-content: flex-start;
@@ -299,6 +301,7 @@ main section{
 
 p {
     padding: 1em ;
+    margin: 1em;
 }
 /* -----Here ends top part of Main----- */
 
@@ -319,6 +322,51 @@ p {
     margin: 2em;
     padding: 2em;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+/* ----- Glow Shadow Effect ----- */
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+.botItems a {
+    background-color: rebeccapurple;
+    margin-left: 0.8em;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+  /* ----- Glow Effect -----*/
+.hvr-glow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+}
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 

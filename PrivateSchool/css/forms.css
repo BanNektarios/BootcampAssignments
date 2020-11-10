@@ -1,6 +1,41 @@
 /* --This a CSS Page only for the forms-- */
 
-.container {
+
+
+
+                /* ----- Mobile ----- */
+@media (max-width:880) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    form {
+        border: 5px solid rgb(80, 46, 46);
+        border-radius: 10px;
+        margin-top: 10em;
+        margin-bottom: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(66, 64, 64);
+    }
+    
+}
+
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,18 +44,16 @@
 form {
     border: 5px solid rgb(80, 46, 46);
     border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
     margin-top: 10em;
     margin-bottom: 10em;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
+    display: flex;
+    flex-direction: column;
     background-color: rgb(66, 64, 64);
 }
 
 h3 {
     padding-left: 0.5em;
+    padding: 1em;
     margin: 1em;
     font-size: 1.3em;
     text-align: center;
@@ -36,3 +69,4 @@ label {
 select, input, textarea {
     margin: 1em;
 }
+
