@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-*/
+/* */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,7 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -48,6 +48,151 @@ table {
 }
 /* ------A normalization for the CSS above------ */
 
+@media(max-width:880px) {
+
+
+html {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+body {
+    background-color: rgb(85, 83, 83);
+    color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+/* ------Here starts the nav------ */
+nav {
+    overflow: hidden;
+	position: relative;
+	top: 0;
+    background-color: rgb(185, 91, 91);
+    font-size: 1.5em;
+    border-radius: 0.3em;
+    margin: auto;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+nav img {
+	height: 100px;
+	width: 100px;
+	margin: auto;
+	margin-bottom: 0.2em;
+	border-radius: 10px;
+}
+
+nav a {
+	text-decoration: none;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+	padding: 0.2em;
+}
+
+.active {
+    background-color: rgb(150, 75, 75);
+    border-radius: 0.5em;
+}
+nav a:hover {
+    background-color: rgb(126, 54, 54);
+    border-radius: 20px;
+}
+/* ------Here ends the nav------ */
+
+
+/* ------Here begins the main body----- */
+main {
+	margin: 2em;
+	z-index: 1;
+	text-align: justify;
+}
+
+
+/* ------Top part of the main----- */
+.top {
+    background-color: rgb(192, 127, 127);
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	flex-wrap: wrap-reverse;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border-radius: 10px;
+}
+
+.top aside {
+	margin-bottom: em;
+	padding: 5px 10px;
+	border-bottom: 3px solid rgb(85, 83, 83);
+}
+
+.top section {
+	margin-top: 0.5em;
+	padding: 5px 15px;
+	border-top: 2px solid rgb(85, 83, 83);
+}
+/* -----Here ends top part of Main----- */
+
+
+/* -----Here starts bottom part of Main*/
+
+.mainBot {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+	flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.mainBot section {
+	background-color: rgb(43, 40, 40);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 10px;
+}
+/* ------Here ends the main body------ */
+
+
+/* ------Here begins the footer of the page------ */
+footer {
+    background-color: rgb(185, 91, 91);
+    position: static;
+    bottom: 100;
+    max-width: 1100px;
+    width: 100%;
+	padding-right: 10px;
+}
+
+footer h4 {
+    padding: 5px;
+    display: block;
+}
+
+footer li, a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: thistle;
+}
+
+}
+/* -----End Of Mobile Version----- */
+
+
+/* -----Desktop Version----- */
+
+@media (min-width: 881px) {
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -63,9 +208,9 @@ body {
 .container {
     max-width: 1100px;
     margin: auto;
-    display: flex;
-
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ------Here starts the nav------ */
@@ -93,7 +238,7 @@ nav ul {
     justify-content: space-between;
 }
 
-nav a, nav ul li {
+nav a {
     text-decoration: none;
     list-style: none;
     color: white;
@@ -127,7 +272,7 @@ main section{
 .mainTop {
     background-color: rgb(192, 127, 127);
     display: flex;
-    margin-top: 5em;
+    margin-top: 10em;
     margin-bottom: 5em;
     border-radius: 10px;
 }
@@ -170,11 +315,12 @@ p {
 }
 
 .botItems {
-    background-color: rgb(43, 39, 39);
+	background-color: rgb(43, 40, 40);
     margin: 2em;
     padding: 2em;
     border-radius: 10px;
 }
+
 
 /* article {
     margin-left: 2em;
@@ -196,7 +342,8 @@ footer {
     bottom: 0;
     max-width: 1100px;
     width: 100%;
-    padding-right: 10px;
+	padding-right: 10px;
+	z-index: 0;
     
 }
 
@@ -216,7 +363,4 @@ footer a:hover {
     color: thistle;
 
 }
-
-
-
-  
+}
