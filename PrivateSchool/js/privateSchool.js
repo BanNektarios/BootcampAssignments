@@ -5,15 +5,6 @@ class Course {
         this.type = type;
         this.startDate =startDate;
         this.endDate= endDate;
-
-        this.newCourse = new Map();
-        newCourse.set ('Course info :',{
-            'Title': `${this.title}`,
-            'Stream': `${this.stream}`,
-            'Type': `${this.type}`,
-            'Start Date': `${this.startDate}`,
-            'End Date': `${this.endDate}`
-        });
     }
 }
 
@@ -23,13 +14,23 @@ class Student {
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.tuitionFees = tuitionFees;
+    }
+}
 
-        this.newStudent = new Map();
-        newStudent.set ('Student info :',{
-            'First Name': `${this.firstName}`,
-            'Last Name': `${this.lastName}`,
-            'Date of Birth': `${this.dateOfBirth}`,
-            'Tuition Fees': `${this.tuitionFees}`            
-        });
+class Assignments {
+    constructor(assignmentTitle, assignmentDescription, assignmentSubDate, assignmentOralMark, assignmentTotalMark) {
+        this.assignmentTitle = assignmentTitle;
+        this.assignmentDescription = assignmentDescription;
+        this.assignmentSubDate = assignmentSubDate;
+        this.assignmentOralMark = assignmentOralMark;
+        this.assignmentTotalMark =assignmentTotalMark;
+    }
+}
+
+class Trainer {
+    constructor(trainerFirstName, trainerLastName, trainerSubject) {
+        this.trainerFirstName = trainerFirstName;
+        this.trainerLastName = trainerLastName;
+        this.trainerSubject = trainerSubject;
     }
 }
