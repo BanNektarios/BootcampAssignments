@@ -70,3 +70,8 @@ select, input, textarea {
     margin: 1em;
 }
 
+input {
+    size:20;
+
+}
+
