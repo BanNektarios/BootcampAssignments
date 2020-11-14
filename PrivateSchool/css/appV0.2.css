@@ -354,10 +354,12 @@ section p, aside p {
     margin: 2em;
     padding: 2em;
     border-radius: 10px;
+    margin: 1em 1em 5em 1em;
     
 }
 
 .botItems p{
+    font-size: 2rem;
     padding: 1em;
     margin: 5px;
 }
@@ -414,11 +416,22 @@ section p, aside p {
 }
 
             /* ----- FORMS ----- */
-
 .forms {
-    max-width: 40%;
-    
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10em;
 }
+
+.formRow {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
         
             /* ----- FORMS ----- */
 

@@ -55,50 +55,51 @@
         </main>
 
         <div class="forms">
-            <form id="courses">
-                <h3>Manage the Courses</h3>
-                <div class="form-group">
-                    <label for="title">Course Title</label>
-                    <select name="courses" id="title">
-                        <option value="choose">Choose...</option>
-                        <option value="en">English</option>
-                        <option value="chem">Chemistry</option>
-                        <option value="phil">Philosophy</option>
-                        <option value="phil">Algorithms</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="stream">Course Stream</label>
-                    <select name="courses" id="stream">
-                        <option value="choose">Choose...</option>
-                        <option value="csEng">Computer Science Engineering</option>
-                        <option value="chemEng">Chemistry Engineering</option>
-                        <option value="humanities">Humanities</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="type">Course Type</label>
-                    <select name="courses" id="type">
-                        <option value="choose">Choose...</option>
-                        <option value="diplomaHigh">Diploma of Higher Education</option>
-                        <option value="honorsProg">Honors Program</option>
-                        <option value="shortCourses">Short Courses</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="start_date">Course Start-Date</label>
-                    <input type="date" name="start_date" id="start_date">
-                </div>
-    
-                <div class="form-group">
-                    <label for="end_date">Course End-Date</label>
-                    <input type="date" name="end_date" id="end_date">
-                </div>
-    
-                <input type="submit" value="Add" name="set" />
-            </form>
+            <section class="formRow">
+                <form id="courses">
+                    <h3>Courses</h3>
+                    <div class="form-group">
+                        <label for="title">Course Title</label>
+                        <select name="courses" id="title">
+                            <option value="choose">Choose...</option>
+                            <option value="en">English</option>
+                            <option value="chem">Chemistry</option>
+                            <option value="phil">Philosophy</option>
+                            <option value="phil">Algorithms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stream">Course Stream</label>
+                        <select name="courses" id="stream">
+                            <option value="choose">Choose...</option>
+                            <option value="csEng">Computer Science Engineering</option>
+                            <option value="chemEng">Chemistry Engineering</option>
+                            <option value="humanities">Humanities</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Course Type</label>
+                        <select name="courses" id="type">
+                            <option value="choose">Choose...</option>
+                            <option value="diplomaHigh">Diploma of Higher Education</option>
+                            <option value="honorsProg">Honors Program</option>
+                            <option value="shortCourses">Short Courses</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">Course Start-Date</label>
+                        <input type="date" name="start_date" id="start_date">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="end_date">Course End-Date</label>
+                        <input type="date" name="end_date" id="end_date">
+                    </div>
+        
+                    <input type="submit" value="Add" name="set" />
+                </form>
 
-            <form id="students">
+                <form id="students">
                 <h3>Student form</h3>
                 <div class="form-group">
                     <label for="studentFirstName">First Name</label>
@@ -116,59 +117,67 @@
                 <div class="form-group">
                     <label for="tuitionFees">Tuition Fees</label>
                     <input type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
-                </div>                
-            </form>
+                </div>      
+                <input type="submit" value="Add" name="set" />
 
-            <form id="trainers" >
-                <h3>Trainer form</h3>
-                
-                <div class="form-group">
-                    <label for="trainerFirstName">First Name</label>
-                    <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
-                </div>
-                <p class="message"></p>
-                <div class="form-group">
-                    <label for="trainerLastName">Last Name</label>
-                    <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
-                </div>
-                <p class="message"></p>
-
-                <div class="form-group">
-                    <label for="trainerSubject">Subject</label>
-                    <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
-                </div>
-                <div>
-                    <input type="submit" value="Submit">
-                </div>
-
-                
-            </form>
-
-            <form id="assignments">
-                <h3>Manage the Assignments</h3>
-                <div class="form-group">
-                    <label for="assignmentTitle">Assignment Title</label>
-                    <input type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
+                </form>
+            </section>
+            <section class="formRow">
+                <form id="trainers" >
+                    <h3>Trainer form</h3>
                     
-                <div class="form-group">
-                    <label for="assignmentDescription">Assignment Description</label>
-                    <textarea name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="assignmentSubDate">Assignment Submission Date</label>
-                    <input type="date" name="assignmentSubDate" id="assignmentSubDate">
-                </div>
+                    <div class="form-group">
+                        <label for="trainerFirstName">First Name</label>
+                        <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
+                    </div>
+                    <p class="message"></p>
+                    <div class="form-group">
+                        <label for="trainerLastName">Last Name</label>
+                        <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
+                    </div>
+                    <p class="message"></p>
 
-                <div class="form-group">
-                    <label for="assignmentOralMark">Assignment Oral Mark</label>
-                    <input type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
-                </div>
-                <div class="form-group">
-                    <label for="assignmentTotalMark">Assignment Total Mark</label>
-                    <input type="number" name="assignmentTotalMark" id="assignmentOralMark" min="0" maxlength="100">
-                </div>
-                
-            </form>
+                    <div class="form-group">
+                        <label for="trainerSubject">Subject</label>
+                        <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <input type="submit" value="Add" name="set" />
+
+                    
+                </form>
+
+                <form id="assignments">
+                    <h3>Assignments</h3>
+                    <div class="form-group">
+                        <label for="assignmentTitle">Assignment Title</label>
+                        <input type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
+                        
+                    <div class="form-group">
+                        <label for="assignmentDescription">Assignment Description</label>
+                        <textarea name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="assignmentSubDate">Assignment Submission Date</label>
+                        <input type="date" name="assignmentSubDate" id="assignmentSubDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignmentOralMark">Assignment Oral Mark</label>
+                        <input type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="assignmentTotalMark">Assignment Total Mark</label>
+                        <input type="number" name="assignmentTotalMark" id="assignmentOralMark" min="0" maxlength="100">
+                    </div>
+                    <div class="buttons">
+                        <input type="submit" value="Add" name="set" />
+                    </div>
+                    
+                </form>
+                </section>
         </div>
 
         <footer>
