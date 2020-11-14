@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lions Private School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/appV0.2.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="_img/logo.png" alt="School Logo" width="80px">
+            <a class="active" href="main.html">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#students">Students</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+    <div class="container">
+        
+        <main>
+            <div class="top">
+                <aside>
+                    <p class="firstPar">Welcome to the Lion Privare School! Here, your future begins.</p>
+
+                </aside>
+                <section>
+                    <p class="firstPar">We take Pride in our teaching methods, applied by our most talented and world renowned Professors.</p>
+                </section>
+            </div>
+            <div class="mainBot">
+                <section class="botItems hvr-grow-shadow">
+                    <p class="firstPar"><strong>Manage The People</strong></p>
+                    <a class="hvr-glow" href="#trainers">Trainer</a>
+                    <a class="hvr-glow" href="#students">Students</a>
+                    <a class="hvr-glow" href="#">Trainers per Course</a>
+                    <a class="hvr-glow" href="#">Students per Course</a>
+                </section>
+                <section class="botItems hvr-grow-shadow">
+                    <p class="firstPar">Manage The Stuff</p>
+                    <a class="hvr-glow" href="#courses">Courses</a>
+                    <a class="hvr-glow" href="#assignments">Assignments</a>
+                    <a class="hvr-glow" href="#">Assignments per Course</a>
+                </section>
+                <section class="botItems hvr-grow-shadow">
+                    <p>Assignments per Course per Student</p>
+                    <a class="hvr-glow" href="#">Here</a>
+                </section>
+            </div>    
+        </main>
+
+        <div class="forms">
+            <form id="courses">
+                <h3>Manage the Courses</h3>
+                <div class="form-group">
+                    <label for="title">Course Title</label>
+                    <select name="courses" id="title">
+                        <option value="choose">Choose...</option>
+                        <option value="en">English</option>
+                        <option value="chem">Chemistry</option>
+                        <option value="phil">Philosophy</option>
+                        <option value="phil">Algorithms</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stream">Course Stream</label>
+                    <select name="courses" id="stream">
+                        <option value="choose">Choose...</option>
+                        <option value="csEng">Computer Science Engineering</option>
+                        <option value="chemEng">Chemistry Engineering</option>
+                        <option value="humanities">Humanities</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type">Course Type</label>
+                    <select name="courses" id="type">
+                        <option value="choose">Choose...</option>
+                        <option value="diplomaHigh">Diploma of Higher Education</option>
+                        <option value="honorsProg">Honors Program</option>
+                        <option value="shortCourses">Short Courses</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Course Start-Date</label>
+                    <input type="date" name="start_date" id="start_date">
+                </div>
+    
+                <div class="form-group">
+                    <label for="end_date">Course End-Date</label>
+                    <input type="date" name="end_date" id="end_date">
+                </div>
+    
+                <input type="submit" value="Add" name="set" />
+            </form>
+
+            <form id="students">
+                <h3>Student form</h3>
+                <div class="form-group">
+                    <label for="studentFirstName">First Name</label>
+                    <input type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here">
+                </div>
+                <div class="form-group">
+                    <label for="studentLastName">Last Name</label>
+                    <input type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here">
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" name="dateOfBirth" id="dateOfBirth">
+                </div>
+
+                <div class="form-group">
+                    <label for="tuitionFees">Tuition Fees</label>
+                    <input type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
+                </div>                
+            </form>
+
+            <form id="trainers" >
+                <h3>Trainer form</h3>
+                
+                <div class="form-group">
+                    <label for="trainerFirstName">First Name</label>
+                    <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
+                </div>
+                <p class="message"></p>
+                <div class="form-group">
+                    <label for="trainerLastName">Last Name</label>
+                    <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
+                </div>
+                <p class="message"></p>
+
+                <div class="form-group">
+                    <label for="trainerSubject">Subject</label>
+                    <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+
+                
+            </form>
+
+            <form id="assignments">
+                <h3>Manage the Assignments</h3>
+                <div class="form-group">
+                    <label for="assignmentTitle">Assignment Title</label>
+                    <input type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
+                    
+                <div class="form-group">
+                    <label for="assignmentDescription">Assignment Description</label>
+                    <textarea name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="assignmentSubDate">Assignment Submission Date</label>
+                    <input type="date" name="assignmentSubDate" id="assignmentSubDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="assignmentOralMark">Assignment Oral Mark</label>
+                    <input type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="assignmentTotalMark">Assignment Total Mark</label>
+                    <input type="number" name="assignmentTotalMark" id="assignmentOralMark" min="0" maxlength="100">
+                </div>
+                
+            </form>
+        </div>
+
+        <footer>
+            <h4>Webpage Navigation</h4>
+                <hr>
+            <div>
+                <ul>
+                    <li><a href="privateSchool.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="trainer.html">Trainers</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

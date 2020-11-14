@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title>Trainers</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/appV0.2.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script src="js/privateSchool.js"></script>
+    <script src="js/validation.js"></script>
 </head>
 <body>
     <header>
@@ -24,20 +24,26 @@
     <div class="container">
         
         <main>
-            <form>
+            <form id="trainers" >
                 <h3>Trainer form</h3>
                 
                 <div class="form-group">
                     <label for="trainerFirstName">First Name</label>
-                    <input type="text" name="trainerFirstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
+                    <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
                 </div>
+                <p class="message"></p>
                 <div class="form-group">
                     <label for="trainerLastName">Last Name</label>
-                    <input type="text" name="trainerLastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
+                    <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
                 </div>
+                <p class="message"></p>
+
                 <div class="form-group">
                     <label for="trainerSubject">Subject</label>
-                    <input type="text" name="trainerSubject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
+                    <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
                 </div>
 
                 

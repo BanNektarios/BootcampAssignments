@@ -35,11 +35,13 @@
 }
 
 
-main {
+/* main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    display: flex;
+    flex-wrap: wrap;
+} */
 
 form {
     border: 5px solid rgb(80, 46, 46);
