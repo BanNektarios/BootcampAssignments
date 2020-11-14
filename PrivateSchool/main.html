@@ -21,6 +21,7 @@
             <a href="#">Sign In</a>
         </nav>
     </header>
+    
     <div class="container">
         
         <main>
@@ -59,13 +60,13 @@
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <input name="courses" id="courseTitle" type="text" placeholder="Tilte here...">
+                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here...">
                             
                         </input>
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <input name="courses" id="courseStream" type="text" placeholder="Stream here...">
+                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here...">
                             <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>
                             <option value="chemEng">Chemistry Engineering</option>
@@ -74,7 +75,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select name="courses" id="courseType">
+                        <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType">
                             <option value="choose">Choose...</option>
                             <option value="partTime">Part-time</option>
                             <option value="fullTime">Full time</option>
@@ -91,19 +92,21 @@
                         <input type="date" name="end_date" id="end_date">
                     </div>
         
-                    <input type="button" onclick="addCourse()" value="Add" name="set" />
+                    <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addCourse()" value="Add" name="set" />
                 </form>
 
                 <form id="students">
                 <h3>Student form</h3>
                 <div class="form-group">
                     <label for="studentFirstName">First Name</label>
-                    <input type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value="">
+                    <input class="hvr-grow-shadow hvr-glow" type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value="">
                 </div>
+                <p class="message"></p>
                 <div class="form-group">
                     <label for="studentLastName">Last Name</label>
-                    <input type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here">
+                    <input class="hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here">
                 </div>
+                <p class="message"></p>
                 <div class="form-group">
                     <label for="dateOfBirth">Date of Birth</label>
                     <input type="date" name="dateOfBirth" id="dateOfBirth">
@@ -111,9 +114,9 @@
 
                 <div class="form-group">
                     <label for="tuitionFees">Tuition Fees</label>
-                    <input type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
+                    <input class="hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
                 </div>      
-                <input type="button"  onclick="addStudent()" value="Add" name="set" />
+                <input class="hvr-grow-shadow hvr-glow" type="button"  onclick="addStudent()" value="Add" name="set" />
 
                 </form>
             </section>
@@ -123,12 +126,12 @@
                     
                     <div class="form-group">
                         <label for="trainerFirstName">First Name</label>
-                        <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
+                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
                     </div>
                     <p class="message"></p>
                     <div class="form-group">
                         <label for="trainerLastName">Last Name</label>
-                        <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
+                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
                     </div>
                     <p class="message"></p>
 
@@ -137,9 +140,8 @@
                         <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
                     </div>
                     <div>
-                        <input type="button" value="Submit">
                     </div>
-                    <input type="button" onclick="addTrainer()" value="Add" name="set" />
+                    <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addTrainer()" value="Add" name="set" />
 
                     
                 </form>
@@ -148,11 +150,11 @@
                     <h3>Assignments</h3>
                     <div class="form-group">
                         <label for="assignmentTitle">Assignment Title</label>
-                        <input type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
+                        <input class="hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here">
                         
                     <div class="form-group">
                         <label for="assignmentDescription">Assignment Description</label>
-                        <textarea name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                        <textarea class="hvr-grow-shadow hvr-glow" name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
                     </div>
                     <div class="form-group">
                         <label for="assignmentSubDate">Assignment Submission Date</label>
@@ -161,14 +163,14 @@
 
                     <div class="form-group">
                         <label for="assignmentOralMark">Assignment Oral Mark</label>
-                        <input type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
+                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="100">
                     </div>
                     <div class="form-group">
                         <label for="assignmentTotalMark">Assignment Total Mark</label>
-                        <input type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="100">
+                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="100">
                     </div>
                     <div class="buttons">
-                        <input type="button" onclick="addAssignment()" value="Add" name="set" />
+                        <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addAssignment()" value="Add" name="set" />
                     </div>
                     
                 </form>
@@ -191,8 +193,5 @@
             </div>
         </footer>
     </div>
-
-
-
 </body>
 </html>

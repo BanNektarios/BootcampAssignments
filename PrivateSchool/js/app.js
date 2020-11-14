@@ -1,3 +1,26 @@
+// VARIABLES
+    // TRAINER
+const trainerFirstName = document.getElementById("trainerFirstName");
+const trainerLastName = document.getElementById("trainerLastName");
+const trainerSubject = document.getElementById("trainerSubject");
+    // STUDENT
+const studentFirstName = document.getElementById("studentFirstName");
+const studentLastName = document.getElementById("studentLastName");
+const dateOfBirth = document.getElementById("dateOfBirth");
+const tuitionFees = document.getElementById("tuitionFees");
+    // COURSE
+const courseTitle = document.getElementById("courseTitle");
+const courseStream = document.getElementById("courseStream");
+const courseType = document.getElementById("courseType");
+const start_date = document.getElementById("start_date");
+const end_date = document.getElementById("end_date");
+    //ASSIGNMENT
+const assignmentTitle = document.getElementById("assignmentTitle");
+const assignmentDescription = document.getElementById("assignmentDescription");
+const assignmentSubDate = document.getElementById("assignmentSubDate");
+const assignmentOralMark = document.getElementById("assignmentOralMark");
+const assignmentTotalMark = document.getElementById("assignmentTotalMark");
+const message = document.querySelectorAll("message");
 
 
 //Our object constructors
@@ -39,44 +62,45 @@ class Trainer {
 }
 
 // STUDENT INSTANCE
-let addStudent = function () {
-    let studentFirstName = document.getElementById("studentFirstName").value;
-    let studentLastName = document.getElementById("studentLastName").value;
-    let dateOfBirth = document.getElementById("dateOfBirth").value;
-    let tuitionFees = document.getElementById("tuitionFees").value;
-    let student = new Student(studentFirstName, studentLastName, dateOfBirth, tuitionFees);
+let addStudent = function () {   
+    let student = new Student(studentFirstName.value, studentLastName.value, dateOfBirth.value, tuitionFees.value);
     console.log(student);
-  }
+}
 
 
 // TRAINER INSTANCE
 let addTrainer = function () {
-    let trainerFirstName = document.getElementById("trainerFirstName").value;
-    let trainerLastName = document.getElementById("trainerLastName").value;
-    let trainerSubject = document.getElementById("trainerSubject").value;
-    let trainer = new Trainer(trainerFirstName, trainerLastName, trainerSubject);
+    let trainer = new Trainer(trainerFirstName.value, trainerLastName.value, trainerSubject.value);
     console.log(trainer);
-  }
+}
 
 
 // COURSE INSTANCE
-  let addCourse = function () {
-    let courseTitle = document.getElementById("courseTitle").value;
-    let courseStream = document.getElementById("courseStream").value;
-    let courseType = document.getElementById("courseType").value;
-    let start_date = document.getElementById("start_date").value;
-    let end_date = document.getElementById("end_date").value;
-    let course = new Course(courseTitle, courseStream, courseType, start_date, end_date);
+let addCourse = function () {
+    let course = new Course(courseTitle.value, courseStream.value, courseType.value, start_date.value, end_date.value);
     console.log(course);
-  }
+}
 
-  // ASSIGNMENT INSTANCE
-  let addAssignment = function () {
-    let assignmentTitle = document.getElementById("assignmentTitle").value;
-    let assignmentDescription = document.getElementById("assignmentDescription").value;
-    let assignmentSubDate = document.getElementById("assignmentSubDate").value;
-    let assignmentOralMark = document.getElementById("assignmentOralMark").value;
-    let assignmentTotalMark = document.getElementById("assignmentTotalMark").value;
-    let assignment = new Assignment(assignmentTitle, assignmentDescription, assignmentSubDate, assignmentOralMark, assignmentTotalMark);
+
+// ASSIGNMENT INSTANCE
+let addAssignment = function () {
+    let assignment = new Assignment(assignmentTitle.value, assignmentDescription.value, assignmentSubDate.value, assignmentOralMark.value, assignmentTotalMark.value);
     console.log(assignment);
-  }
+}
+
+
+//VALIDATION
+// ----> the validation can call the instance to be created
+let nameValidate = function (name) {
+    let isNotLetters = new RegExp(/[\d\W]/)
+    names = new Array[trainerFirstName, trainerLastName, studentFirstName, studentLastName];
+    for ( name in names) {
+        if (isNotLetters.test(names) === false) {
+            
+        }
+    }
+}
+
+
+//EVENT LISTENERS
+// ----> the
