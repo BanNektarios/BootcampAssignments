@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/appV0.2.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,7 +27,6 @@
             <div class="top">
                 <aside>
                     <p class="firstPar">Welcome to the Lion Privare School! Here, your future begins.</p>
-
                 </aside>
                 <section>
                     <p class="firstPar">We take Pride in our teaching methods, applied by our most talented and world renowned Professors.</p>
@@ -35,7 +34,7 @@
             </div>
             <div class="mainBot">
                 <section class="botItems hvr-grow-shadow">
-                    <p class="firstPar"><strong>Manage The People</strong></p>
+                    <p class="firstPar">Manage The People</p>
                     <a class="hvr-glow" href="#trainers">Trainer</a>
                     <a class="hvr-glow" href="#students">Students</a>
                     <a class="hvr-glow" href="#">Trainers per Course</a>
@@ -60,30 +59,26 @@
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <select name="courses" id="title">
-                            <option value="choose">Choose...</option>
-                            <option value="en">English</option>
-                            <option value="chem">Chemistry</option>
-                            <option value="phil">Philosophy</option>
-                            <option value="phil">Algorithms</option>
-                        </select>
+                        <input name="courses" id="courseTitle" type="text" placeholder="Tilte here...">
+                            
+                        </input>
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <select name="courses" id="stream">
-                            <option value="choose">Choose...</option>
+                        <input name="courses" id="courseStream" type="text" placeholder="Stream here...">
+                            <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>
                             <option value="chemEng">Chemistry Engineering</option>
-                            <option value="humanities">Humanities</option>
-                        </select>
+                            <option value="humanities">Humanities</option> -->
+                        </input>
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select name="courses" id="type">
+                        <select name="courses" id="courseType">
                             <option value="choose">Choose...</option>
-                            <option value="diplomaHigh">Diploma of Higher Education</option>
-                            <option value="honorsProg">Honors Program</option>
-                            <option value="shortCourses">Short Courses</option>
+                            <option value="partTime">Part-time</option>
+                            <option value="fullTime">Full time</option>
+                            <option value="seminar">Seminar</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -96,14 +91,14 @@
                         <input type="date" name="end_date" id="end_date">
                     </div>
         
-                    <input type="submit" value="Add" name="set" />
+                    <input type="button" onclick="addCourse()" value="Add" name="set" />
                 </form>
 
                 <form id="students">
                 <h3>Student form</h3>
                 <div class="form-group">
                     <label for="studentFirstName">First Name</label>
-                    <input type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here">
+                    <input type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value="">
                 </div>
                 <div class="form-group">
                     <label for="studentLastName">Last Name</label>
@@ -118,7 +113,7 @@
                     <label for="tuitionFees">Tuition Fees</label>
                     <input type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
                 </div>      
-                <input type="submit" value="Add" name="set" />
+                <input type="button"  onclick="addStudent()" value="Add" name="set" />
 
                 </form>
             </section>
@@ -142,9 +137,9 @@
                         <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
                     </div>
                     <div>
-                        <input type="submit" value="Submit">
+                        <input type="button" value="Submit">
                     </div>
-                    <input type="submit" value="Add" name="set" />
+                    <input type="button" onclick="addTrainer()" value="Add" name="set" />
 
                     
                 </form>
@@ -170,15 +165,17 @@
                     </div>
                     <div class="form-group">
                         <label for="assignmentTotalMark">Assignment Total Mark</label>
-                        <input type="number" name="assignmentTotalMark" id="assignmentOralMark" min="0" maxlength="100">
+                        <input type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="100">
                     </div>
                     <div class="buttons">
-                        <input type="submit" value="Add" name="set" />
+                        <input type="button" onclick="addAssignment()" value="Add" name="set" />
                     </div>
                     
                 </form>
                 </section>
         </div>
+
+
 
         <footer>
             <h4>Webpage Navigation</h4>
@@ -194,5 +191,8 @@
             </div>
         </footer>
     </div>
+
+
+
 </body>
 </html>
