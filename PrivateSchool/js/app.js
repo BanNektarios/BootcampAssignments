@@ -230,8 +230,11 @@ function toggleForm (form) {
     }
 }
 
-    
 
+// GO TO TOP BUTTON
+let goTop = document.getElementById("goTop").addEventListener("click", function() {
+    window.scrollTo(0,0);
+});
 
 //TODO
 //Validation for other forms <-3
