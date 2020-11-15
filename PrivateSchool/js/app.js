@@ -204,6 +204,21 @@ const toggleStudent = toggleStudentForm.addEventListener("click", function(){
 const toggleCourses = toggleCoursesform.addEventListener("click", function(){ 
     return toggleForm(coursesForm);
 });
+const toggleAssignments = toggleAssingmentsform.addEventListener("click", function(){ 
+    return toggleForm(assignmentForm);
+});
+const toggleTrainer_Course = toggleTrainer_CourseForm.addEventListener("click", function(){ 
+    return toggleForm(trainer_CourseForm);
+});
+const toggleStudent_Course = toggleStudent_CourseForm.addEventListener("click", function(){ 
+    return toggleForm(student_CourseForm);
+});
+const toggleAssignments_Course = toggleAssignments_CourseForm.addEventListener("click", function(){ 
+    return toggleForm(assignments_CourseForm);
+});
+const toggleBig_Form = toggleBigForm.addEventListener("click", function(){ 
+    return toggleForm(bigForm);
+});
 
 
 // Toggle Function
