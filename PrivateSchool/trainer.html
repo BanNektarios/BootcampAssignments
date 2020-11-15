@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/appV0.2.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script src="js/validation.js"></script>
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,27 +26,26 @@
         <main>
             <form id="trainers" >
                 <h3>Trainer form</h3>
-                
                 <div class="form-group">
                     <label for="trainerFirstName">First Name</label>
-                    <input class="names" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
+                    <input class="names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20"required>
                 </div>
-                <p class="message"></p>
+                <p class="message">*cannot contain numbers and symbols</p>
                 <div class="form-group">
                     <label for="trainerLastName">Last Name</label>
-                    <input class="names" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
+                    <input class="names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30"required>
                 </div>
-                <p class="message"></p>
+                <p class="message">*cannot contain numbers and symbols</p>
 
                 <div class="form-group">
                     <label for="trainerSubject">Subject</label>
-                    <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" />
+                    <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1"required />
                 </div>
-                <div>
-                    <input type="submit" value="Submit">
+                <div class="btn">
+                    <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="button" value="Add" name="set"/>
+                    <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
+                    <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                 </div>
-
-                
             </form>
         </main>
         <footer>

@@ -1,19 +1,22 @@
-// VARIABLES
+// ------------> VARIABLES <------------
     // TRAINER
 const trainerFirstName = document.getElementById("trainerFirstName");
 const trainerLastName = document.getElementById("trainerLastName");
 const trainerSubject = document.getElementById("trainerSubject");
+
     // STUDENT
 const studentFirstName = document.getElementById("studentFirstName");
 const studentLastName = document.getElementById("studentLastName");
 const dateOfBirth = document.getElementById("dateOfBirth");
 const tuitionFees = document.getElementById("tuitionFees");
+
     // COURSE
 const courseTitle = document.getElementById("courseTitle");
 const courseStream = document.getElementById("courseStream");
 const courseType = document.getElementById("courseType");
 const start_date = document.getElementById("start_date");
 const end_date = document.getElementById("end_date");
+
     // ASSIGNMENT
 const assignmentTitle = document.getElementById("assignmentTitle");
 const assignmentDescription = document.getElementById("assignmentDescription");
@@ -21,11 +24,32 @@ const assignmentSubDate = document.getElementById("assignmentSubDate");
 const assignmentOralMark = document.getElementById("assignmentOralMark");
 const assignmentTotalMark = document.getElementById("assignmentTotalMark");
 let message = document.querySelectorAll(".message");
+
     // ADD BUTTONS
 const addTrainerBtn = document.getElementById("addTrainer");
 const addCourseBtn = document.getElementById("addCourse");
 const addStudentBtn = document.getElementById("addStudent");
 const addAssignmentBtn = document.getElementById("addAssignment");
+
+    // FORM TOGGLE
+const toggleTrainerForm = document.getElementById("toggleTrainer");
+const toggleStudentForm = document.getElementById("toggleStudent");
+const toggleTrainer_CourseForm = document.getElementById("toggleTrainer_Course");
+const toggleStudent_CourseForm = document.getElementById("toggleStudent_Course");
+const toggleCoursesform = document.getElementById("toggleCourses");
+const toggleAssingmentsform = document.getElementById("toggleAssignments");
+const toggleAssignments_CourseForm = document.getElementById("toggleAssignments_Course");
+const toggleBigForm = document.getElementById("toggleBigForm");
+
+    // FORMS
+const trainersForm = document.forms.trainers;
+const studentsForm = document.forms.students;
+const coursesForm = document.forms.courses;
+const assignmentForm = document.forms.assignments;
+const trainer_CourseForm = document.forms.trainersPerCourse;
+const student_CourseForm = document.forms.studentsPerCourse;
+const assignments_CourseForm = document.forms.assignmentsPerCourse;
+const bigForm = document.forms.assignmentsStudentCourse;
 
 
 //Our object constructors
@@ -152,8 +176,12 @@ let nameValidate = function (name) {
     
 }
 
+let hasInput = function(){
+    document.querySelectorAll("<input>")
+}
+
     // EVENT LISTENERS
-//for name inputs
+// for name inputs
 const trainerFirstListener = trainerFirstName.addEventListener('input', function() {
     return nameValidate(trainerFirstName.value);
 });
@@ -166,10 +194,34 @@ const studentFirstListener = studentFirstName.addEventListener('input', function
 const studentLastListener = studentLastName.addEventListener('input', function() {
     return nameValidate(studentLastName.value);
 });
+// for Forms
+const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
+    return toggleForm(trainersForm);
+});
+const toggleStudent = toggleStudentForm.addEventListener("click", function(){ 
+    return toggleForm(studentsForm);
+});
+const toggleCourses = toggleCoursesform.addEventListener("click", function(){ 
+    return toggleForm(coursesForm);
+});
+
+
+// Toggle Function
+function toggleForm (form) {
+    if (form.style.display === "none" || form.style.display === "") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+    
+
 
 //TODO
 //Validation for other forms <-3
 //Data to appear at a dynamic table on our page <---1
 //Forms submited to show as options to other forms <--2
 
-alert("MAKE THE OTHERS FORMS!!!!!");
+
+//TESTS

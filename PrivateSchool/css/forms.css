@@ -20,6 +20,7 @@
         flex-wrap: wrap;
         align-items: center;
     }
+
 }
 
 
@@ -37,9 +38,12 @@ form {
     margin: auto;
     margin-top: 5em;
     display: flex;
+    display: none;
     flex-direction: column;
     background-color: rgb(66, 64, 64);
 }
+
+
 
 @media(min-width:881px){
     form {
@@ -49,7 +53,8 @@ form {
         display: flex;
         flex-direction: column;
         background-color: rgb(66, 64, 64);
-    }
+        display: none;
+}
 }
 
 .message {
@@ -68,6 +73,14 @@ h3 {
     border-bottom: 1px solid grey;
 }
 
+h2{
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.3em;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
 label {
     padding: 1em;
     font-size: 1.3em;
@@ -77,9 +90,11 @@ select, input, textarea{
     margin: 1em;
     padding: 0.3em;
 }
-input[type="text"] {
-}
 
+input[type="button"] {
+    margin: 0.65em;
+    padding: 0.1em;
+}
 
 /* ----- Glow Shadow Effect ----- */
 .hvr-grow-shadow {

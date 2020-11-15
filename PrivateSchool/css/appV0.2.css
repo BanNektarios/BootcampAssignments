@@ -121,7 +121,7 @@ main {
 
 /* ------Top part of the main----- */
 .top {
-    background-color: rgb(192, 127, 127);
+    background-color: rgb(197, 107, 107);
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
@@ -160,13 +160,6 @@ main {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-
-.botItems a {
-    background-color: rgb(146, 126, 167);
-    margin-left: 0.8em;
-    padding: 13px;
-    border-radius: 10px;
-}
 
   /* ----- Glow Effect -----*/
 .hvr-glow {
@@ -216,13 +209,13 @@ main {
 }
 
 .botItems a {
-    background-color: rgb(146, 126, 167);
+    background-color: rgba(255, 94, 94, 0.589)
+    ;
     border-radius: 10px;
     text-align: center;
-    padding: 1em;
+    padding: 1.2em;
     margin: 0.5em;
     width: 40%;
-    float: left;
 }
 
 /* ------Here ends the main body------ */
@@ -279,7 +272,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: nowrap; */
 	/* align-items: center; <-- Messes with the footer size */
 }
 
@@ -341,7 +334,7 @@ main section{
 
 /* ------Top part of the main----- */
 .top {
-    background-color: rgb(192, 127, 127);
+    background-color: rgb(197, 107, 107);
     display: flex;
     margin-top: 10em;
     margin-bottom: 5em;
@@ -406,7 +399,7 @@ section p, aside p {
 }
 
 .botItems a {
-    background-color: rgb(146, 126, 167);
+    background-color: rgba(255, 94, 94, 0.589);
     border-radius: 10px;
     text-align: center;
     padding: 1em;
@@ -433,13 +426,6 @@ section p, aside p {
     transform: scale(1.1);
   }
 
-.botItems a {
-    background-color: rgb(146, 126, 167);
-    margin-left: 0.8em;
-    padding: 13px;
-    border-radius: 10px;
-}
-
   /* ----- Glow Effect -----*/
 .hvr-glow {
     display: inline-block;
@@ -461,7 +447,7 @@ section p, aside p {
     max-width: 1000px;
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 10em;
 }
 
@@ -469,12 +455,27 @@ section p, aside p {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: right;
 }
 
 
 
         
             /* ----- FORMS ----- */
+
+#goTop {
+    position: relative;
+    right: -867px;
+    bottom: 100px;
+    padding: 1em;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+	background-color: rgb(75, 69, 69);
+    border: 1px solid rgb(202, 124, 124);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);}
+
 
 
 /* ------Here ends the main body------ */
