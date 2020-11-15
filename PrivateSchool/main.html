@@ -92,7 +92,7 @@
                         <input type="date" name="end_date" id="end_date">
                     </div>
         
-                    <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addCourse()" value="Add" name="set" />
+                    <input id="addCourse" class="hvr-grow-shadow hvr-glow" type="button" onclick="addCourse()" value="Add" name="set" />
                 </form>
 
                 <form id="students">
@@ -101,12 +101,12 @@
                     <label for="studentFirstName">First Name</label>
                     <input class="hvr-grow-shadow hvr-glow" type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value="">
                 </div>
-                <p class="message"></p>
+                <p class="message">*cannot contain numbers and symbols</p>
                 <div class="form-group">
                     <label for="studentLastName">Last Name</label>
                     <input class="hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here">
                 </div>
-                <p class="message"></p>
+                <p class="message">*cannot contain numbers and symbols</p>
                 <div class="form-group">
                     <label for="dateOfBirth">Date of Birth</label>
                     <input type="date" name="dateOfBirth" id="dateOfBirth">
@@ -116,7 +116,7 @@
                     <label for="tuitionFees">Tuition Fees</label>
                     <input class="hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="tuitionFees" min="1" step="any" />
                 </div>      
-                <input class="hvr-grow-shadow hvr-glow" type="button"  onclick="addStudent()" value="Add" name="set" />
+                <input id="addStudent" class="hvr-grow-shadow hvr-glow" type="button"  onclick="addStudent()" value="Add" name="set" />
 
                 </form>
             </section>
@@ -128,12 +128,12 @@
                         <label for="trainerFirstName">First Name</label>
                         <input class="names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20">
                     </div>
-                    <p class="message"></p>
+                    <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="trainerLastName">Last Name</label>
                         <input class="names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30">
                     </div>
-                    <p class="message"></p>
+                    <p class="message">*cannot contain numbers and symbols</p>
 
                     <div class="form-group">
                         <label for="trainerSubject">Subject</label>
@@ -141,7 +141,7 @@
                     </div>
                     <div>
                     </div>
-                    <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addTrainer()" value="Add" name="set" />
+                    <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="button" value="Add" name="set" />
 
                     
                 </form>
@@ -170,7 +170,7 @@
                         <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="100">
                     </div>
                     <div class="buttons">
-                        <input class="hvr-grow-shadow hvr-glow" type="button" onclick="addAssignment()" value="Add" name="set" />
+                        <input id="addAssignment" class="hvr-grow-shadow hvr-glow" type="button" onclick="addAssignment()" value="Add" name="set" />
                     </div>
                     
                 </form>

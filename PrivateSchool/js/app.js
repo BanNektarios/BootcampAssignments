@@ -14,13 +14,18 @@ const courseStream = document.getElementById("courseStream");
 const courseType = document.getElementById("courseType");
 const start_date = document.getElementById("start_date");
 const end_date = document.getElementById("end_date");
-    //ASSIGNMENT
+    // ASSIGNMENT
 const assignmentTitle = document.getElementById("assignmentTitle");
 const assignmentDescription = document.getElementById("assignmentDescription");
 const assignmentSubDate = document.getElementById("assignmentSubDate");
 const assignmentOralMark = document.getElementById("assignmentOralMark");
 const assignmentTotalMark = document.getElementById("assignmentTotalMark");
-const message = document.querySelectorAll("message");
+let message = document.querySelectorAll(".message");
+    // ADD BUTTONS
+const addTrainerBtn = document.getElementById("addTrainer");
+const addCourseBtn = document.getElementById("addCourse");
+const addStudentBtn = document.getElementById("addStudent");
+const addAssignmentBtn = document.getElementById("addAssignment");
 
 
 //Our object constructors
@@ -90,17 +95,81 @@ let addAssignment = function () {
 
 
 //VALIDATION
-// ----> the validation can call the instance to be created
+    //TODO the validation can call the instance to be created
 let nameValidate = function (name) {
     let isNotLetters = new RegExp(/[\d\W]/)
-    names = new Array[trainerFirstName, trainerLastName, studentFirstName, studentLastName];
-    for ( name in names) {
-        if (isNotLetters.test(names) === false) {
+    switch (name) {
+        case studentFirstName.value:
+            if (isNotLetters.test(name)) {
+                studentFirstName.style.boxShadow = "0 0 1em red";
+                message[0].style.display = "inherit";
+                addStudentBtn.disabled = true;
+
+            } else {
+                studentFirstName.style.boxShadow = "inherit";
+                message[0].style.display = "none"; 
+                addStudentBtn.disabled = false;
+            }
+            break;
+
+        case studentLastName.value:
+            if (isNotLetters.test(name)) {
+                studentLastName.style.boxShadow = "0 0 1em red";
+                message[1].style.display = "inherit";
+                addStudentBtn.disabled = true;
+            } else {
+                studentLastName.style.boxShadow = "inherit";
+                message[1].style.display = "none"; 
+                addStudentBtn.disabled = false;
+            }
+            break;
             
-        }
+        case trainerFirstName.value:
+            if (isNotLetters.test(name)) {
+                trainerFirstName.style.boxShadow = "0 0 1em red";
+                message[2].style.display = "inherit";
+                addTrainerBtn.disabled = true;
+            } else {
+                trainerFirstName.style.boxShadow = "inherit";
+                message[2].style.display = "none"; 
+                addTrainerBtn.disabled = false;
+            }
+            break;
+
+        case trainerLastName.value:
+            if (isNotLetters.test(name)) {
+                trainerLastName.style.boxShadow = "0 0 1em red";
+                message[3].style.display = "inherit";
+                addTrainerBtn.disabled = true;
+            } else {
+                trainerLastName.style.boxShadow = "inherit";
+                message[3].style.display = "none"; 
+                addTrainerBtn.disabled = false;
+            }
+            break;
+        
     }
+    
 }
 
+    // EVENT LISTENERS
+//for name inputs
+const trainerFirstListener = trainerFirstName.addEventListener('input', function() {
+    return nameValidate(trainerFirstName.value);
+});
+const trainerLastListener = trainerLastName.addEventListener('input', function() {
+    return nameValidate(trainerLastName.value);
+});
+const studentFirstListener = studentFirstName.addEventListener('input', function() {
+    return nameValidate(studentFirstName.value);
+});
+const studentLastListener = studentLastName.addEventListener('input', function() {
+    return nameValidate(studentLastName.value);
+});
 
-//EVENT LISTENERS
-// ----> the
+//TODO
+//Validation for other forms <-3
+//Data to appear at a dynamic table on our page <---1
+//Forms submited to show as options to other forms <--2
+
+alert("MAKE THE OTHERS FORMS!!!!!");
