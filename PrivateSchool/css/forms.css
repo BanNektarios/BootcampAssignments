@@ -115,7 +115,11 @@ input[type="button"] {
     transform: scale(1.02);
   }
 
-
+.btn { 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
   /* ----- Glow Effect -----*/
 .hvr-glow {
     display: inline-block;
