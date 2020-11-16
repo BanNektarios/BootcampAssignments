@@ -92,6 +92,7 @@ select, input, textarea{
 }
 
 input[type="button"] {
+    margin: auto;
     margin: 0.65em;
     padding: 0.1em;
 }
