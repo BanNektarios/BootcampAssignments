@@ -51,6 +51,14 @@
                     <a id="toggleBigForm" class="hvr-glow" href="#assignmentsStudentCourse">Here</a>
                 </section>
             </div>    
+            <div class="database">
+                <h3>Database</h3>
+                <ul class="ul data">
+                    <li>aawsdasd</li>
+                    <li>aawsdasd</li>
+                    <li>aawsdasd</li>
+                </ul>
+            </div>
         </main>
 
         <div class="forms">
@@ -59,11 +67,11 @@
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here..." required>
+                        <input class="courseTitle hvr-grow-shadow hvr-glow" name="title" id="" type="text" placeholder="Tilte here..." required>
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here..." required>
+                        <input class="courseStream hvr-grow-shadow hvr-glow" name="stream" id="" type="text" placeholder="Stream here..." required>
                             <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>
                             <option value="chemEng">Chemistry Engineering</option>
@@ -72,7 +80,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType" required>
+                        <select class="courseType hvr-grow-shadow hvr-glow" name="type" id="" required>
                             <option value="choose">Choose...</option>
                             <option value="partTime">Part-time</option>
                             <option value="fullTime">Full time</option>
@@ -81,15 +89,15 @@
                     </div>
                     <div class="form-group">
                         <label for="start_date">Course Start-Date</label>
-                        <input type="date" name="start_date" id="start_date" required>
+                        <input class="start_date" type="date" name="start_date" required>
                     </div>
         
                     <div class="form-group">
                         <label for="end_date">Course End-Date</label>
-                        <input type="date" name="end_date" id="end_date"required>
+                        <input class="end_date" type="date" name="end_date" required>
                     </div>
                     <div class="btn">
-                        <input id="addCourse" class="hvr-grow-shadow hvr-glow" type="button" value="Add" name="add" />
+                        <input class="addCourse hvr-grow-shadow hvr-glow" type="submit" value="Add" name="add" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -99,25 +107,25 @@
                 <h3>Student form</h3>
                 <div class="form-group">
                     <label for="studentFirstName">First Name</label>
-                    <input class="hvr-grow-shadow hvr-glow" type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value=""required>
+                    <input class="studentFirstName hvr-grow-shadow hvr-glow" type="text" name="studentFirstName"  placeholder="Enter first name here" value=""required>
                 </div>
                 <p class="message">*cannot contain numbers and symbols</p>
                 <div class="form-group">
                     <label for="studentLastName">Last Name</label>
-                    <input class="hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here"required>
+                    <input class="studentLastName hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="" placeholder="Enter last name here"required>
                 </div>
                 <p class="message">*cannot contain numbers and symbols</p>
                 <div class="form-group">
                     <label for="dateOfBirth">Date of Birth</label>
-                    <input type="date" name="dateOfBirth" id="dateOfBirth"required>
+                    <input class="dateOfBirth" type="date" name="dateOfBirth" id="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="tuitionFees">Tuition Fees</label>
-                    <input class="hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="tuitionFees" min="1" step="any"required />
+                    <input class="tuitionFees hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="" min="1" step="any"required />
                 </div>      
                 <div class="btn">
-                    <input id="addStudent" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set"/>
+                    <input class="addStudent hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set"/>
                     <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                     <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                 </div>
@@ -128,21 +136,21 @@
                     <h3>Trainer form</h3>
                     <div class="form-group">
                         <label for="trainerFirstName">First Name</label>
-                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20"required>
+                        <input class="trainerFirstName names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="" placeholder="Enter first name here..." min="2" max="20"required>
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="trainerLastName">Last Name</label>
-                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30"required>
+                        <input class="trainerLastName names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="" placeholder="Enter last name here..." min="2" max="30"required>
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
 
                     <div class="form-group">
                         <label for="trainerSubject">Subject</label>
-                        <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1"required />
+                        <input class="trainerSubject" type="text" name="subject" id="" placeholder="Enter subject..."  min="1"required />
                     </div>
                     <div class="btn">
-                        <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                        <input class="addTrainer hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -152,27 +160,27 @@
                     <h3>Assignments</h3>
                     <div class="form-group">
                         <label for="assignmentTitle">Assignment Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here"required>
+                        <input class="assignmentTitle hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="" placeholder="Enter title name here"required>
                         
                     <div class="form-group">
                         <label for="assignmentDescription">Assignment Description</label>
-                        <textarea class="hvr-grow-shadow hvr-glow" name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                        <textarea class="assignmentDescription hvr-grow-shadow hvr-glow" name="assignmentDescription" id="" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
                     </div>
                     <div class="form-group">
                         <label for="assignmentSubDate">Assignment Submission Date</label>
-                        <input type="date" name="assignmentSubDate" id="assignmentSubDate"required>
+                        <input class="assignmentSubDate" type="date" name="assignmentSubDate" id=""required>
                     </div>
 
                     <div class="form-group">
                         <label for="assignmentOralMark">Assignment Oral Mark</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="20"required>
+                        <input class="assignmentOralMark hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="" min="0" maxlength="20"required>
                     </div>
                     <div class="form-group">
                         <label for="assignmentTotalMark">Assignment Total Mark</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="80"required>
+                        <input class="assignmentTotalMark hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="" min="0" maxlength="80"required>
                     </div>
                     <div class="btn">
-                        <input id="addAssignment" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                        <input class="addAssignment hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -186,17 +194,17 @@
                     <h3>Trainer form</h3>
                     <div class="form-group">
                         <label for="trainerFirstName">First Name</label>
-                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="trainerFirstName" placeholder="Enter first name here..." min="2" max="20" required />
+                        <input class="trainerFirstName names hvr-grow-shadow hvr-glow" type="text" name="firstName" id="" placeholder="Enter first name here..." min="2" max="20" required />
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="trainerLastName">Last Name</label>
-                        <input class="names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="trainerLastName" placeholder="Enter last name here..." min="2" max="30" required />
+                        <input class="trainerLastName names hvr-grow-shadow hvr-glow" type="text" name="lastName" id="" placeholder="Enter last name here..." min="2" max="30" required />
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="trainerSubject">Subject</label>
-                        <input type="text" name="subject" id="trainerSubject" placeholder="Enter subject..."  min="1" required />
+                        <input class="trainerSubject" type="text" name="subject" id="" placeholder="Enter subject..."  min="1" required />
                     </div>
                     <div class="btn">
                         
@@ -204,11 +212,11 @@
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here..." required />
+                        <input class="courseTitle hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Tilte here..." required />
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here..." required />
+                        <input class="courseStream hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Stream here..." required />
                             <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>z
                             <option value="chemEng">Chemistry Engineering</option>
@@ -216,7 +224,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType" required >
+                        <select class="courseType hvr-grow-shadow hvr-glow" name="courses" id="" required >
                             <option value="choose">Choose...</option>
                             <option value="partTime">Part-time</option>
                             <option value="fullTime">Full time</option>
@@ -225,14 +233,14 @@
                     </div>
                     <div class="form-group">
                         <label for="start_date">Course Start-Date</label>
-                        <input type="date" name="start_date" id="start_date" required />
+                        <input class="start_date" type="date" name="start_date" required />
                     </div>
                     <div class="form-group">
                         <label for="end_date">Course End-Date</label>
-                        <input type="date" name="end_date" id="end_date" required />
+                        <input class="end_date" type="date" name="end_date"  required />
                     </div>
                     <div class="btn">
-                        <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                        <input class="addTrainer hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -243,33 +251,33 @@
                     <h3>Student form</h3>
                     <div class="form-group">
                         <label for="studentFirstName">First Name</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value=""required>
+                        <input class="studentFirstName hvr-grow-shadow hvr-glow" type="text" name="studentFirstName"  placeholder="Enter first name here" value=""required>
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="studentLastName">Last Name</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here"required>
+                        <input class="studentLastName hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="" placeholder="Enter last name here"required>
                     </div>
                     <p class="message">*cannot contain numbers and symbols</p>
                     <div class="form-group">
                         <label for="dateOfBirth">Date of Birth</label>
-                        <input type="date" name="dateOfBirth" id="dateOfBirth"required>
+                        <input class="dateOfBirth" type="date" name="dateOfBirth" id=""required>
                     </div>
 
                     <div class="form-group">
                         <label for="tuitionFees">Tuition Fees</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="tuitionFees" min="1" step="any"required />
+                        <input class="tuitionFees hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="" min="1" step="any"required />
                     </div>      
                     <div class="btn">
                     </div>
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here..." required>
+                        <input class="courseTitle hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Tilte here..." required>
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here..." required>
+                        <input class="courseStream hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Stream here..." required>
                             <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>
                             <option value="chemEng">Chemistry Engineering</option>
@@ -278,7 +286,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType" required>
+                        <select class="courseType hvr-grow-shadow hvr-glow" name="courses" id="" required>
                             <option value="choose">Choose...</option>
                             <option value="partTime">Part-time</option>
                             <option value="fullTime">Full time</option>
@@ -287,14 +295,14 @@
                     </div>
                     <div class="form-group">
                         <label for="start_date">Course Start-Date</label>
-                        <input type="date" name="start_date" id="start_date" required />
+                        <input class="start_date" type="date" name="start_date" required />
                     </div>
                     <div class="form-group">
                         <label for="end_date">Course End-Date</label>
-                        <input type="date" name="end_date" id="end_date" required />
+                        <input class="end_date" type="date" name="end_date"  required />
                     </div>
                     <div class="btn">
-                        <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                        <input class="addTrainer hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -305,33 +313,33 @@
                     <h3>Assignments</h3>
                     <div class="form-group">
                         <label for="assignmentTitle">Assignment Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here"required>
+                        <input class="assignmentTitle hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="" placeholder="Enter title name here"required>
                         
                     <div class="form-group">
                         <label for="assignmentDescription">Assignment Description</label>
-                        <textarea class="hvr-grow-shadow hvr-glow" name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                        <textarea class="assignmentDescription hvr-grow-shadow hvr-glow" name="assignmentDescription" id="" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
                     </div>
                     <div class="form-group">
                         <label for="assignmentSubDate">Assignment Submission Date</label>
-                        <input type="date" name="assignmentSubDate" id="assignmentSubDate"required>
+                        <input class="assignmentSubDate" type="date" name="assignmentSubDate" id=""required>
                     </div>
 
                     <div class="form-group">
                         <label for="assignmentOralMark">Assignment Oral Mark</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="20"required>
+                        <input class="assignmentOralMark hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="" min="0" maxlength="20"required>
                     </div>
                     <div class="form-group">
                         <label for="assignmentTotalMark">Assignment Total Mark</label>
-                        <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="80"required>
+                        <input class="assignmentTotalMark hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="" min="0" maxlength="80"required>
                     </div>
                     <h3>Courses</h3>
                     <div class="form-group">
                         <label for="title">Course Title</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here..." required />
+                        <input class="courseTitle hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Tilte here..." required />
                     </div>
                     <div class="form-group">
                         <label for="stream">Course Stream</label>
-                        <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here..." required />
+                        <input class="courseStream hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Stream here..." required />
                             <!-- <option value="choose">Choose...</option>
                             <option value="csEng">Computer Science Engineering</option>
                             <option value="chemEng">Chemistry Engineering</option>
@@ -340,7 +348,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type">Course Type</label>
-                        <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType" required >
+                        <select class="courseType hvr-grow-shadow hvr-glow" name="courses" id="" required >
                             <option value="choose">Choose...</option>
                             <option value="partTime">Part-time</option>
                             <option value="fullTime">Full time</option>
@@ -349,14 +357,14 @@
                     </div>
                     <div class="form-group">
                         <label for="start_date">Course Start-Date</label>
-                        <input type="date" name="start_date" id="start_date" required />
+                        <input class="start_date" type="date" name="start_date" required />
                     </div>
                     <div class="form-group">
                         <label for="end_date">Course End-Date</label>
-                        <input type="date" name="end_date" id="end_date" required />
+                        <input class="end_date" type="date" name="end_date"  required />
                     </div>
                     <div class="btn">
-                        <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                        <input class="addTrainer hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                         <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                     </div>
@@ -370,53 +378,53 @@
                         <h3>Assignments</h3>
                         <div class="form-group">
                             <label for="assignmentTitle">Assignment Title</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="assignmentTitle" placeholder="Enter title name here"required>
+                            <input class="assignmentTitle hvr-grow-shadow hvr-glow" type="text" name="assignmentTitle" id="" placeholder="Enter title name here"required>
                             
                         <div class="form-group">
                             <label for="assignmentDescription">Assignment Description</label>
-                            <textarea class="hvr-grow-shadow hvr-glow" name="assignmentDescription" id="assignmentDescription" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
+                            <textarea class="assignmentDescription hvr-grow-shadow hvr-glow" name="assignmentDescription" id="" cols="30" rows="5" placeholder="Enter Description here..."></textarea>
                         </div>
                         <div class="form-group">
                             <label for="assignmentSubDate">Assignment Submission Date</label>
-                            <input type="date" name="assignmentSubDate" id="assignmentSubDate"required>
+                            <input class="assignmentSubDate" type="date" name="assignmentSubDate" id=""required>
                         </div>
 
                         <div class="form-group">
                             <label for="assignmentOralMark">Assignment Oral Mark</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="assignmentOralMark" min="0" maxlength="20"required>
+                            <input class="assignmentOralMark hvr-grow-shadow hvr-glow" type="number" name="assignmentOralMark" id="" min="0" maxlength="20"required>
                         </div>
                         <div class="form-group">
                             <label for="assignmentTotalMark">Assignment Total Mark</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="assignmentTotalMark" min="0" maxlength="80"required>
+                            <input class="assignmentTotalMark hvr-grow-shadow hvr-glow" type="number" name="assignmentTotalMark" id="" min="0" maxlength="80"required>
                         </div>
                         <h3>Student form</h3>
                         <div class="form-group">
                             <label for="studentFirstName">First Name</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="text" name="studentFirstName" id="studentFirstName" placeholder="Enter first name here" value=""required>
+                            <input class="studentFirstName hvr-grow-shadow hvr-glow" type="text" name="studentFirstName"  placeholder="Enter first name here" value=""required>
                         </div>
                         <p class="message">*cannot contain numbers and symbols</p>
                         <div class="form-group">
                             <label for="studentLastName">Last Name</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="studentLastName" placeholder="Enter last name here"required>
+                            <input class="studentLastName hvr-grow-shadow hvr-glow" type="text" name="studentLastName" id="" placeholder="Enter last name here"required>
                         </div>
                         <p class="message">*cannot contain numbers and symbols</p>
                         <div class="form-group">
                             <label for="dateOfBirth">Date of Birth</label>
-                            <input type="date" name="dateOfBirth" id="dateOfBirth"required>
+                            <input class="dateOfBirth" type="date" name="dateOfBirth" id=""required>
                         </div>
         
                         <div class="form-group">
                             <label for="tuitionFees">Tuition Fees</label>
-                            <input class="hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="tuitionFees" min="1" step="any"required />
+                            <input class="tuitionFees hvr-grow-shadow hvr-glow" type="number" name="tuitionFees" id="" min="1" step="any"required />
                         </div>
                         <h3>Courses</h3>
                         <div class="form-group">
                             <label for="title">Course Title</label>
-                            <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseTitle" type="text" placeholder="Tilte here..." required />
+                            <input class="courseTitle hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Tilte here..." required />
                         </div>
                         <div class="form-group">
                             <label for="stream">Course Stream</label>
-                            <input class="hvr-grow-shadow hvr-glow" name="courses" id="courseStream" type="text" placeholder="Stream here..." required />
+                            <input class="courseStream hvr-grow-shadow hvr-glow" name="courses" id="" type="text" placeholder="Stream here..." required />
                                 <!-- <option value="choose">Choose...</option>
                                 <option value="csEng">Computer Science Engineering</option>
                                 <option value="chemEng">Chemistry Engineering</option>
@@ -425,7 +433,7 @@
                         </div>
                         <div class="form-group">
                             <label for="type">Course Type</label>
-                            <select class="hvr-grow-shadow hvr-glow" name="courses" id="courseType" required >
+                            <select class="courseType hvr-grow-shadow hvr-glow" name="courses" id="" required >
                                 <option value="choose">Choose...</option>
                                 <option value="partTime">Part-time</option>
                                 <option value="fullTime">Full time</option>
@@ -434,14 +442,14 @@
                         </div>
                         <div class="form-group">
                             <label for="start_date">Course Start-Date</label>
-                            <input type="date" name="start_date" id="start_date" required />
+                            <input class="start_date" type="date" name="start_date" required />
                         </div>
                         <div class="form-group">
                             <label for="end_date">Course End-Date</label>
-                            <input type="date" name="end_date" id="end_date" required />
+                            <input class="end_date" type="date" name="end_date"  required />
                         </div>
                         <div class="btn">
-                            <input id="addTrainer" class="hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
+                            <input class="addTrainer hvr-grow-shadow hvr-glow" type="submit" value="Add" name="set" />
                             <input class="hvr-grow-shadow hvr-glow" type="button" value="Edit" name="edit" disabled/>
                             <input class="hvr-grow-shadow hvr-glow" type="button" value="Update" name="update" disabled/>
                         </div>
