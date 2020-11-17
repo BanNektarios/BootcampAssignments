@@ -1,8 +1,8 @@
 // ------------> VARIABLES <------------
     // TRAINER
-const trainerFirstName = document.getElementsByClassName("trainerFirstName");
-const trainerLastName = document.getElementsByClassName("trainerLastName");
-const trainerSubject = document.getElementsByClassName("trainerSubject");
+// const trainerFirstName = document.getElementsByClassName("trainerFirstName");
+// const trainerLastName = document.getElementsByClassName("trainerLastName");
+// const trainerSubject = document.getElementsByClassName("trainerSubject");
 let trainerId = 1;
 let trainerArray = [];
 
@@ -60,6 +60,9 @@ const assignments_CourseForm = document.forms.assignmentsPerCourse;
 const bigForm = document.forms.assignmentsStudentCourse;
 let message = document.querySelectorAll(".message");
 
+// LIST NUMBERING
+
+
 // for Forms
 const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
     return toggleForm(trainersForm);
@@ -107,6 +110,8 @@ let listMaker = function () {
 const newCourse = courses.addEventListener("submit", function(){
 
     function check() {
+
+            //VALIDATION (outdated)
         // if (courses.title.value === ""){
         //     alert("Enter a Title");
         // } else if (courses.type.value === ""){
@@ -120,28 +125,59 @@ const newCourse = courses.addEventListener("submit", function(){
         // } else {}
 
         let addCourse = function () {
-        let course = new Course(courses.title.value, courses.type.value, courses.stream.value, courses.start_date.value, courses.end_date.value, courseId);
-        courseArray.push(course);
-        courses.title.value = ""; // Can be function
-        courses.type.value = "";
-        courses.stream.value = "";
-        courses.start_date.value = "";
-        courses.end_date.value = "";
-        console.log(course);
+            let course = new Course(courses.title.value, courses.type.value, courses.stream.value, courses.start_date.value, courses.end_date.value, courseId);
+            courseArray.push(course);
+            courses.title.value = ""; 
+            courses.type.value = "";
+            courses.stream.value = "";
+            courses.start_date.value = "";
+            courses.end_date.value = "";
+            console.log(course);
         }
         addCourse();
         newLine();
         }
 
-
     let newLine = function() {
         thisEntry = courseId -1 ;
         let ulData = document.querySelector(".ul.data");
         let entry = document.createElement("li");
-        entry.append(`${courseId}. Course: ${courseArray[thisEntry].title}, ${courseArray[thisEntry].type}, ${courseArray[thisEntry].stream}. From ${courseArray[thisEntry].startDate} to ${courseArray[thisEntry].endDate} `);
+        entry.append(`Course ID :${courseId} - ${courseArray[thisEntry].title}, ${courseArray[thisEntry].type}, ${courseArray[thisEntry].stream}. From ${courseArray[thisEntry].startDate} to ${courseArray[thisEntry].endDate} `);
         ulData.appendChild(entry);
         courseId++;
+    }
+    check();
+});
 
+const newTrainer = trainers.addEventListener("submit", function() {
+
+    function check() {
+        // if (trainers.trainerFirstName.value === ""){
+        //     alert("Enter first name");
+        // } else if (trainers.trainerLastName.value === "") {
+        //     alert("Enter last name");
+        // } else if (trainers.trainerSubject.value === ""){
+        //     alert("Enter a Subject");
+        // } else { 
+        let addTrainer = function () {
+            let trainer = new Trainer(trainers.trainerFirstName.value, trainers.trainerLastName.value, trainers.trainerSubject.value, trainerId);
+            trainerArray.push(trainer);
+            trainers.trainerFirstName.value = "";
+            trainers.trainerLastName.value = "";
+            trainers.trainerSubject.value = "";
+            console.log(trainerArray);
+        }
+        addTrainer();
+        newLine();
+    }
+    
+    let newLine = function() {
+        thisEntry = trainerId -1 ;
+        let ulData = document.querySelector(".ul.data");
+        let entry = document.createElement("li");
+        entry.append(`ID: ${trainerId} - ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}, ${trainerArray[thisEntry].trainerSubject}`);
+        ulData.appendChild(entry);
+        trainerId++;
     }
     check();
 });
@@ -296,7 +332,7 @@ class Trainer {
 
 //VALIDATION
     //TODO the validation can call the instance to be created
-let nameValidate = function (name) {
+let nameValidate = function () {
     let isNotLetters = new RegExp(/[\d\W]/)
     switch (name) {
         case studentFirstName.value:
@@ -323,27 +359,27 @@ let nameValidate = function (name) {
             }
             break;
             
-        case trainerFirstName.value:
+        case trainers.trainerFirstName.value:
             if (isNotLetters.test(name)) {
-                trainerFirstName.style.boxShadow = "0 0 1em red";
+                trainers.trainerFirstName.style.boxShadow = "0 0 1em red";
                 message[2].style.display = "inherit";
-                addTrainerBtn.disabled = true;
+                trainers.add.disabled = true;
             } else {
-                trainerFirstName.style.boxShadow = "inherit";
+                trainers.trainerFirstName.style.boxShadow = "inherit";
                 message[2].style.display = "none"; 
-                addTrainerBtn.disabled = false;
+                trainers.add.disabled = false;
             }
             break;
 
-        case trainerLastName.value:
+        case trainers.trainerLastName.value:
             if (isNotLetters.test(name)) {
-                trainerLastName.style.boxShadow = "0 0 1em red";
+                trainers.trainerLastName.style.boxShadow = "0 0 1em red";
                 message[3].style.display = "inherit";
-                addTrainerBtn.disabled = true;
+                trainers.add.disabled = true;
             } else {
-                trainerLastName.style.boxShadow = "inherit";
+                trainers.trainerLastName.style.boxShadow = "inherit";
                 message[3].style.display = "none"; 
-                addTrainerBtn.disabled = false;
+                trainers.add.disabled = false;
             }
             break;
 
@@ -355,8 +391,8 @@ let nameValidate = function (name) {
     // ---------> EVENT LISTENERS <----------
 
 // for name inputs
-const trainerFirstListener = trainerFirstName.addEventListener('input', function() {
-    return nameValidate(trainerFirstName.value);
+const trainerFirstListener = trainers.addEventListener('input', function() {
+    return nameValidate();
 });
 const trainerLastListener = trainerLastName.addEventListener('input', function() {
     return nameValidate(trainerLastName.value);
