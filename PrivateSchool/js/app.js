@@ -1,43 +1,20 @@
 // ------------> VARIABLES <------------
     // TRAINER
-// const firstName = document.getElementsByClassName("firstName");
-// const lastName = document.getElementsByClassName("lastName");
-// const subject = document.getElementsByClassName("subject");
 let trainerId = 1;
 let trainerArray = [];
 
     // STUDENT
-// const studentFirstName = document.getElementsByClassName("studentFirstName");
-// const lastName = document.getElementsByClassName("lastName");
-// const dateOfBirth = document.getElementsByClassName("dateOfBirth");
-// const tuitionFees = document.getElementsByClassName("tuitionFees");
 let studentId = 1;
 let studentArray = [];
 
 
     // COURSE
-// const courseTitle = document.getElementsByClassName("courseTitle");
-// const courseStream = document.getElementsByClassName("courseStream");
-// const courseType = document.getElementsByClassName("courseType");
-// const start_date = document.getElementsByClassName("start_date");
-// const end_date = document.getElementsByClassName("end_date");
 let courseId = 1;
 let courseArray = [];
 
     // ASSIGNMENT
-// const assignmentTitle = document.getElementsByClassName("assignmentTitle");
-// const assignmentDescription = document.getElementsByClassName("assignmentDescription");
-// const assignmentSubDate = document.getElementsByClassName("assignmentSubDate");
-// const assignmentOralMark = document.getElementsByClassName("assignmentOralMark");
-// const assignmentTotalMark = document.getElementsByClassName("assignmentTotalMark");
 let assignmentId = 1;
 let assignmentArray = [];
-
-    // ADD BUTTONS
-// const addTrainerBtn = document.getElementsByClassName("addTrainer");
-// const addCourseBtn = document.getElementsByClassName("addCourse");
-// const addStudentBtn = document.getElementsByClassName("addStudent");
-// const addAssignmentBtn = document.getElementsByClassName("addAssignment");
 
     // FORM TOGGLE
 const toggleTrainerForm = document.getElementById("toggleTrainer");
@@ -48,16 +25,6 @@ const toggleCoursesform = document.getElementById("toggleCourses");
 const toggleAssingmentsform = document.getElementById("toggleAssignments");
 const toggleAssignments_CourseForm = document.getElementById("toggleAssignments_Course");
 const toggleBigForm = document.getElementById("toggleBigForm");
-
-    // FORMS
-const trainersForm = document.forms.trainers;
-const studentsForm = document.forms.students;
-const coursesForm = document.forms.courses;
-const assignmentForm = document.forms.assignments;
-const trainer_CourseForm = document.forms.trainersPerCourse;
-const student_CourseForm = document.forms.studentsPerCourse;
-const assignments_CourseForm = document.forms.assignmentsPerCourse;
-const bigForm = document.forms.assignmentsStudentCourse;
 let message = document.querySelectorAll(".message");
 
 // LIST NUMBERING
@@ -65,28 +32,28 @@ let message = document.querySelectorAll(".message");
 
 // for Forms
 const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
-    return toggleForm(trainersForm);
+    return toggleForm(trainers);
 });
 const toggleStudent = toggleStudentForm.addEventListener("click", function(){ 
-    return toggleForm(studentsForm);
+    return toggleForm(students);
 });
 const toggleCourses = toggleCoursesform.addEventListener("click", function(){ 
-    return toggleForm(coursesForm);
+    return toggleForm(courses);
 });
 const toggleAssignments = toggleAssingmentsform.addEventListener("click", function(){ 
-    return toggleForm(assignmentForm);
+    return toggleForm(assignments);
 });
 const toggleTrainer_Course = toggleTrainer_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(trainer_CourseForm);
+    return toggleForm(trainersPerCourse);
 });
 const toggleStudent_Course = toggleStudent_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(student_CourseForm);
+    return toggleForm(studentsPerCourse);
 });
 const toggleAssignments_Course = toggleAssignments_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(assignments_CourseForm);
+    return toggleForm(assignmentsPerCourse);
 });
 const toggleBig_Form = toggleBigForm.addEventListener("click", function(){ 
-    return toggleForm(bigForm);
+    return toggleForm(assignmentsStudentCourse);
 });
 
 
@@ -255,113 +222,7 @@ class Trainer {
     }
 }
 
-
-// STUDENT INSTANCE
-// addStudentBtn[0].addEventListener("click", function() { 
-//     if (studentFirstName.value === ""){
-//         return alert("Enter first name");
-//     } else if (lastName.value === "") {
-//         alert("Enter last name");
-//     } else if (document.getElementsByClassName("dateOfBirth").value === ""){
-//         alert("Enter an age");
-//     } else if (document.getElementsByClassName("tuitionFees").value === "") {
-//         alert("Enter the tuition");
-//     } else { let addStudent = function () {   
-//         let student = new Student(studentFirstName.value, lastName.value, dateOfBirth.value, tuitionFees.value);
-//         studentArray.push(student);
-//         studentId++;
-//         studentFirstName.value = "";
-//         lastName.value = "";
-//         dateOfBirth.value = "";
-//         tuitionFees.value = "";
-//         console.log(studentArray);
-//     }
-//     addStudent();
-// }
-// });
-
-
-// // TRAINER INSTANCE
-// addTrainerBtn[0].addEventListener("click", function() {
-//     if (firstName.value === ""){
-//         return alert("Enter first name");
-//     } else if (lastName.value === "") {
-//         alert("Enter last name");
-//     } else if (document.getElementsByClassName("subject").value === ""){
-//         alert("Enter a Subject");
-//     } else { let addTrainer = function () {
-//         let trainer = new Trainer(firstName.value, lastName.value, subject.value);
-//         trainerArray.push(trainer);
-//         trainerId++;
-//         firstName.value = ""; // Can be function
-//         lastName.value = "";
-//         subject.value = "";
-//         console.log(trainerArray);
-//     }
-//     addTrainer();
-// }
-// });
-
-
-// // COURSE INSTANCE
-// addCourseBtn[0].addEventListener("click", function() {
-//     if (courseTitle.value === ""){
-//         return alert("Enter a Title");
-//     } else if (courseStream.value === ""){
-//         alert("Enter course stream");
-//     } else if (courseType.value === ""){
-//         alert("Enter course type");
-//     } else if (start_date.value === ""){
-//         alert("Enter start date");
-//     } else if (end_date.value === ""){
-//         alert("Enter end date");
-//     } else {let addCourse = function () {
-//         let course = new Course(courseTitle.value, courseStream.value, courseType.value, start_date.value, end_date.value);
-//         trainerArray.push(course);
-//         courseId++;
-//         courseTitle.value = ""; // Can be function
-//         courseStream.value = "";
-//         courseType.value = "";
-//         start_date.value = "";
-//         end_date.value = "";
-//         console.log(course);
-//     }
-//     addCourse();
-//     }
-// });
-
-
-// // ASSIGNMENT INSTANCE
-// addAssignmentBtn[0].addEventListener("click", function() {
-//     if (assignmentTitle.value === ""){
-//         return alert("Enter a Title");
-//     } else if (assignmentDescription.value === "") {
-//         alert("Enter a description");
-//     } else if (assignmentSubDate.value === ""){
-//         alert("Enter a Submission Date");
-//     } else if (assignmentOralMark.value === ""){
-//         alert("Enter an Oral Mark");
-//     } else if (assignmentTotalMark.value === ""){
-//         alert("Enter a Total Mark");
-//     } else {let addAssignment = function () {
-//         let assignment = new Assignment(assignmentTitle.value, assignmentDescription.value, assignmentSubDate.value, assignmentOralMark.value, assignmentTotalMark.value);
-//         assignmentArray.push(assignment);
-//         assignmentId++;
-//         assignmentTitle.value = ""; // Can be function
-//         assignmentDescription.value = "";
-//         assignmentSubDate.value = "";
-//         assignmentOralMark.value = "";
-//         assignmentTotalMark.value = "";
-//         console.log(assignment);
-//     }
-//     addAssignment();
-//     }
-// });
-
-
-
 //VALIDATION
-    //TODO the validation can call the instance to be created
 let nameValidate = function (name) {
     let isNotLetters = new RegExp(/[\d\W]/);
     let isNotNumber = new RegExp(/[\D\W]/);
@@ -444,7 +305,6 @@ let goTop = document.getElementById("goTop").addEventListener("click", function(
 });
 
 //TODO
-//Data to appear at a dynamic table on our page <---1
 //Forms submited to show as options to other forms <--2
 
 
