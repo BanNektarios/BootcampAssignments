@@ -119,7 +119,7 @@ const newTrainer = trainers.addEventListener("submit", function() {
         thisEntry = trainerId -1 ;
         let ulData = document.querySelector(".ul.data");
         let entry = document.createElement("li");
-        entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}, Subject ${trainerArray[thisEntry].trainerSubject}`);
+        entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);
         trainerId++;
     }
@@ -179,6 +179,15 @@ const newAssignment = assignments.addEventListener("submit", function() {
     check();
 });
 
+
+// EDIT
+
+let editBtn = form.edit.addEventListener('click', function(){ 
+    //select a li (maybe drop down dynamically)
+    //li selected is chosen in the array by id-1
+    //values of selected object fill respective input forms
+    //Can we utilize a Map() here
+});
 
 //Our object constructors
 class Course {
