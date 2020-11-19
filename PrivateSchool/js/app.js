@@ -11,10 +11,19 @@ let studentArray = [];
     // COURSE
 let courseId = 1;
 let courseArray = [];
+courseArray.forEach( function(obj){
+    return dataMap.set(`${obj.courseTitle}`, {});
+})
+function addToMap() {
+    dataMap.set(`${courseArray.}`) 
+}
 
     // ASSIGNMENT
 let assignmentId = 1;
 let assignmentArray = [];
+
+let dataMap = new Map();
+dataMap.set()
 
     // FORM TOGGLE
 const toggleTrainerForm = document.getElementById("toggleTrainer");
@@ -75,11 +84,11 @@ const newCourse = courses.addEventListener("submit", function(){
 
     function check() {
         let addCourse = function () {
-            let course = new Course(courses.title.value, courses.type.value, courses.stream.value, courses.start_date.value, courses.end_date.value, courseId);
+            let course = new Course(courses.courseTitle.value, courses.courseStream.value, courses.courseType.value, courses.start_date.value, courses.end_date.value, courseId);
             courseArray.push(course);
-            courses.title.value = ""; 
-            courses.type.value = "";
-            courses.stream.value = "";
+            courses.courseTitle.value = ""; 
+            courses.courseType.value = "";
+            courses.courseStream.value = "";
             courses.start_date.value = "";
             courses.end_date.value = "";
             console.log(course);
@@ -92,7 +101,7 @@ const newCourse = courses.addEventListener("submit", function(){
         thisEntry = courseId -1 ;
         let ulData = document.querySelector(".ul.data");
         let entry = document.createElement("li");
-        entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].title}, Type: ${courseArray[thisEntry].type}, Stream: ${courseArray[thisEntry].stream}. From ${courseArray[thisEntry].startDate} to ${courseArray[thisEntry].endDate} `);
+        entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, courseType: ${courseArray[thisEntry].courseType}, courseStream: ${courseArray[thisEntry].courseStream}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
         ulData.appendChild(entry);
         courseId++;
     }
@@ -179,24 +188,72 @@ const newAssignment = assignments.addEventListener("submit", function() {
     check();
 });
 
+const newTrainerPerCourse = trainersPerCourse.addEventListener("submit", function() {
+
+    function check() {
+      
+        let addTrainer = function () {
+            let trainer = new Trainer(trainersPerCourse.trainerFirstName.value, trainersPerCourse.trainerLastName.value, trainersPerCourse.trainerSubject.value, trainerId);
+            trainerArray.push(trainer);
+            trainersPerCourse.trainerFirstName.value = "";
+            trainersPerCourse.trainerLastName.value = "";
+            trainersPerCourse.trainerSubject.value = "";
+            console.log(trainerArray);
+        }
+        let addCourse = function () {
+            let course = new Course(trainersPerCourse.courseTitle.value, trainersPerCourse.courseStream.value, trainersPerCourse.courseType.value, trainersPerCourse.start_date.value, trainersPerCourse.end_date.value, courseId);
+            courseArray.push(course);
+            trainersPerCourse.courseTitle.value = ""; 
+            trainersPerCourse.courseType.value = "";
+            trainersPerCourse.courseStream.value = "";
+            trainersPerCourse.start_date.value = "";
+            trainersPerCourse.end_date.value = "";
+            console.log(course);
+        }
+    addTrainer();
+    addCourse();
+    newLine();
+    }
+    
+    let newLine = function() {
+        thisEntry = trainerId -1 ;
+        let ulData = document.querySelector(".ul.data");
+        let entry = document.createElement("li");
+        entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
+        ulData.appendChild(entry);
+        trainerId++;
+    }
+    check();
+});
+
+
+
+
+
+
+newEntryId = 1;
+let newLineCheck = function() {
+    // We can create a check here for the new line added by the other forms
+}
+
 
 // EDIT
 
-let editBtn = form.edit.addEventListener('click', function(){ 
-    //select a li (maybe drop down dynamically)
-    //li selected is chosen in the array by id-1
-    //values of selected object fill respective input forms
-    //Can we utilize a Map() here
-});
+// let editBtn = edit.addEventListener('click', function(){ 
+//     //select a li (maybe drop down dynamically)
+//     //li selected is chosen in the array by id-1
+//     //values of selected object fill respective input forms
+//     //Can we utilize a Map() here
+// });
 
 //Our object constructors
 class Course {
-    constructor(title, stream, type, startDate, endDate, courseId) {
-        this.title = title;
-        this.stream = stream;
-        this.type = type;
-        this.startDate = startDate;
-        this.endDate = endDate;
+    constructor(courseTitle, courseStream, courseType, start_date, end_date, courseId) {
+        this.courseTitle = courseTitle;
+        this.courseStream = courseStream;
+        this.courseType = courseType;
+        this.start_date = start_date;
+        this.end_date = end_date;
         this.courseId = courseId;
     }
 }
@@ -309,7 +366,7 @@ const studentLastListener = students.addEventListener('input', function() {
 
 
 // GO TO TOP BUTTON
-let goTop = document.getElementById("goTop").addEventListener("click", function() {
+let goTopBtn = goTop.addEventListener("click", function() {
     window.scrollTo(0,0);
 });
 
