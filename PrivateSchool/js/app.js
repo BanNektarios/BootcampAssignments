@@ -2,6 +2,11 @@
     // TRAINER
 let trainerId = 1;
 let trainerArray = [];
+subjectArray = [];
+function subjectsTaught() {
+    
+    let
+}
 
     // STUDENT
 let studentId = 1;
@@ -15,7 +20,7 @@ courseArray.forEach( function(obj){
     return dataMap.set(`${obj.courseTitle}`, {});
 })
 function addToMap() {
-    dataMap.set(`${courseArray.}`) 
+    dataMap.set(`${courseArray[courseId-1].courseId}`, {}) 
 }
 
     // ASSIGNMENT
@@ -101,7 +106,7 @@ const newCourse = courses.addEventListener("submit", function(){
         thisEntry = courseId -1 ;
         let ulData = document.querySelector(".ul.data");
         let entry = document.createElement("li");
-        entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, courseType: ${courseArray[thisEntry].courseType}, courseStream: ${courseArray[thisEntry].courseStream}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
+        entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, Stream: ${courseArray[thisEntry].courseStream}, Type: ${courseArray[thisEntry].courseType}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
         ulData.appendChild(entry);
         courseId++;
     }
@@ -115,6 +120,7 @@ const newTrainer = trainers.addEventListener("submit", function() {
         let addTrainer = function () {
             let trainer = new Trainer(trainers.trainerFirstName.value, trainers.trainerLastName.value, trainers.trainerSubject.value, trainerId);
             trainerArray.push(trainer);
+            subjectArray.push(trainers.trainerSubject.value)
             trainers.trainerFirstName.value = "";
             trainers.trainerLastName.value = "";
             trainers.trainerSubject.value = "";
@@ -233,7 +239,7 @@ const newTrainerPerCourse = trainersPerCourse.addEventListener("submit", functio
 
 newEntryId = 1;
 let newLineCheck = function() {
-    // We can create a check here for the new line added by the other forms
+
 }
 
 
