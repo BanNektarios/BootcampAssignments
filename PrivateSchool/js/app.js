@@ -3,10 +3,7 @@
 let trainerId = 1;
 let trainerArray = [];
 subjectArray = [];
-function subjectsTaught() {
     
-    let
-}
 
     // STUDENT
 let studentId = 1;
@@ -16,19 +13,12 @@ let studentArray = [];
     // COURSE
 let courseId = 1;
 let courseArray = [];
-courseArray.forEach( function(obj){
-    return dataMap.set(`${obj.courseTitle}`, {});
-})
-function addToMap() {
-    dataMap.set(`${courseArray[courseId-1].courseId}`, {}) 
-}
+
 
     // ASSIGNMENT
 let assignmentId = 1;
 let assignmentArray = [];
 
-let dataMap = new Map();
-dataMap.set()
 
     // FORM TOGGLE
 const toggleTrainerForm = document.getElementById("toggleTrainer");
@@ -44,7 +34,7 @@ let message = document.querySelectorAll(".message");
 // LIST NUMBERING
 
 
-// for Forms
+// Toggle Forms
 const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
     return toggleForm(trainers);
 });
@@ -104,7 +94,7 @@ const newCourse = courses.addEventListener("submit", function(){
 
     let newLine = function() {
         thisEntry = courseId -1 ;
-        let ulData = document.querySelector(".ul.data");
+        let ulData = document.querySelector(".database.list");
         let entry = document.createElement("li");
         entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, Stream: ${courseArray[thisEntry].courseStream}, Type: ${courseArray[thisEntry].courseType}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
         ulData.appendChild(entry);
@@ -132,7 +122,7 @@ const newTrainer = trainers.addEventListener("submit", function() {
     
     let newLine = function() {
         thisEntry = trainerId -1 ;
-        let ulData = document.querySelector(".ul.data");
+        let ulData = document.querySelector(".database.list");
         let entry = document.createElement("li");
         entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);
@@ -149,7 +139,7 @@ const newStudent = students.addEventListener("submit", function() {
         students.studentFirstName.value = "";
         students.studentLastName.value = "";
         students.dateOfBirth.value = "";
-        students.tuitionFees.value = "";
+          students.tuitionFees.value = "";
         console.log(studentArray);
         }
         addStudent();
@@ -158,9 +148,9 @@ const newStudent = students.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = studentId -1 ;
-        let ulData = document.querySelector(".ul.data");
+        let ulData = document.querySelector(".database.list");
         let entry = document.createElement("li");
-        entry.append(`Trainer ID: ${studentId} - Name :${studentArray[thisEntry].studentFirstName}, ${studentArray[thisEntry].studentLastName}, born ${studentArray[thisEntry].dateOfBirth}. Tuition: ${studentArray[thisEntry].tuitionFees}€`);
+        entry.append(`Student ID: ${studentId} - Name :${studentArray[thisEntry].studentFirstName}, ${studentArray[thisEntry].studentLastName}, born ${studentArray[thisEntry].dateOfBirth}. Tuition: ${studentArray[thisEntry].tuitionFees}€`);
         ulData.appendChild(entry);
         studentId++;
     }
@@ -185,7 +175,7 @@ const newAssignment = assignments.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = assignmentId -1 ;
-        let ulData = document.querySelector(".ul.data");
+        let ulData = document.querySelector(".database.list");
         let entry = document.createElement("li");
         entry.append(`Assignment ID: ${assignmentId} - Title: ${assignmentArray[thisEntry].assignmentTitle}, Description: ${assignmentArray[thisEntry].assignmentDescription}, Submission Date ${assignmentArray[thisEntry].assignmentSubDate}. Oral mark: ${assignmentArray[thisEntry].assignmentOralMark}, Total Mark: ${assignmentArray[thisEntry].assignmentTotalMark}`);
         ulData.appendChild(entry);
@@ -223,7 +213,7 @@ const newTrainerPerCourse = trainersPerCourse.addEventListener("submit", functio
     
     let newLine = function() {
         thisEntry = trainerId -1 ;
-        let ulData = document.querySelector(".ul.data");
+        let ulData = document.querySelector(".database.list");
         let entry = document.createElement("li");
         entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);
@@ -377,6 +367,13 @@ let goTopBtn = goTop.addEventListener("click", function() {
 });
 
 //TODO
+/* 
+Αρχικες φορμες για εισαγωγη δεδομενων
+Μεικτες φορμες για να συνδιασεις τα δεδομενα που βαλαμε
+καθε φορμα τη δικη της λιστα
+Edit με κρυφο dropdown για να διαλεγεις απο την λιστα απο οπου εισαγαμε
+Update για να τα αλλαξεις
+*/
 //Forms submited to show as options to other forms <--2
 
 
