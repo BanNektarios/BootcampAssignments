@@ -2,24 +2,32 @@
     // TRAINER
 let trainerId = 1;
 let trainerArray = [];
+<<<<<<< Updated upstream
 subjectArray = [];
     
+=======
+>>>>>>> Stashed changes
 
     // STUDENT
 let studentId = 1;
 let studentArray = [];
 
-
     // COURSE
 let courseId = 1;
 let courseArray = [];
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
     // ASSIGNMENT
 let assignmentId = 1;
 let assignmentArray = [];
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     // FORM TOGGLE
 const toggleTrainerForm = document.getElementById("toggleTrainer");
 const toggleStudentForm = document.getElementById("toggleStudent");
@@ -31,8 +39,9 @@ const toggleAssignments_CourseForm = document.getElementById("toggleAssignments_
 const toggleBigForm = document.getElementById("toggleBigForm");
 let message = document.querySelectorAll(".message");
 
-// LIST NUMBERING
-
+function addSubject () {
+    
+}
 
 // Toggle Forms
 const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
@@ -94,7 +103,11 @@ const newCourse = courses.addEventListener("submit", function(){
 
     let newLine = function() {
         thisEntry = courseId -1 ;
+<<<<<<< Updated upstream
         let ulData = document.querySelector(".database.list");
+=======
+        let ulData = document.querySelector(".data.list");
+>>>>>>> Stashed changes
         let entry = document.createElement("li");
         entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, Stream: ${courseArray[thisEntry].courseStream}, Type: ${courseArray[thisEntry].courseType}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
         ulData.appendChild(entry);
@@ -122,9 +135,13 @@ const newTrainer = trainers.addEventListener("submit", function() {
     
     let newLine = function() {
         thisEntry = trainerId -1 ;
+<<<<<<< Updated upstream
         let ulData = document.querySelector(".database.list");
+=======
+        let ulData = document.querySelector(".data.list");
+>>>>>>> Stashed changes
         let entry = document.createElement("li");
-        entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
+        entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject: ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);
         trainerId++;
     }
@@ -148,7 +165,11 @@ const newStudent = students.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = studentId -1 ;
+<<<<<<< Updated upstream
         let ulData = document.querySelector(".database.list");
+=======
+        let ulData = document.querySelector(".data.list");
+>>>>>>> Stashed changes
         let entry = document.createElement("li");
         entry.append(`Student ID: ${studentId} - Name :${studentArray[thisEntry].studentFirstName}, ${studentArray[thisEntry].studentLastName}, born ${studentArray[thisEntry].dateOfBirth}. Tuition: ${studentArray[thisEntry].tuitionFees}€`);
         ulData.appendChild(entry);
@@ -175,7 +196,11 @@ const newAssignment = assignments.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = assignmentId -1 ;
+<<<<<<< Updated upstream
         let ulData = document.querySelector(".database.list");
+=======
+        let ulData = document.querySelector(".data.list");
+>>>>>>> Stashed changes
         let entry = document.createElement("li");
         entry.append(`Assignment ID: ${assignmentId} - Title: ${assignmentArray[thisEntry].assignmentTitle}, Description: ${assignmentArray[thisEntry].assignmentDescription}, Submission Date ${assignmentArray[thisEntry].assignmentSubDate}. Oral mark: ${assignmentArray[thisEntry].assignmentOralMark}, Total Mark: ${assignmentArray[thisEntry].assignmentTotalMark}`);
         ulData.appendChild(entry);
@@ -213,7 +238,11 @@ const newTrainerPerCourse = trainersPerCourse.addEventListener("submit", functio
     
     let newLine = function() {
         thisEntry = trainerId -1 ;
+<<<<<<< Updated upstream
         let ulData = document.querySelector(".database.list");
+=======
+        let ulData = document.querySelector(".data.list");
+>>>>>>> Stashed changes
         let entry = document.createElement("li");
         entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);

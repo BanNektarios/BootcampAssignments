@@ -250,13 +250,22 @@ footer a:hover {
 }
 /* -----End Of Mobile Version----- */
 
+<<<<<<< Updated upstream
 .database.list li {
+=======
+.data li, .data.lists {
+>>>>>>> Stashed changes
     text-align: center;
     padding: 0.5em;
     margin: auto;
     font-weight: 600;
     list-style: decimal-leading-zero;
 }
+
+.data.lists {
+    display: none;
+}
+
 
 /* -----Desktop Version----- */
 
