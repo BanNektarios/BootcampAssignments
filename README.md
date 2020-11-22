@@ -1,5 +1,6 @@
 # BootcampAssignments
 In this Repo I will be working on my Assignments
+
 Σε αυτο το αποθετηριο θα δουλευω τις εργασιες μου
 
 Σε αυτη την εργασια καλεστηκαμε να φτιαξουμε μια ιστοσελιδα για ενα ιδιωτικο σχολειο.
