@@ -57,12 +57,13 @@
         <div class="forms">
             <section class="formRow">
 
-                <div class="input lists">
+                <div class="input lists courses">
                     <h3>Course List</h3>
-                    <ul class="data courses">
-
+                    <ul class="data courses list">
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleCoursesList">Show Courses</button>
+
                 <form id="courses">
                     <h3>Courses</h3>
                     <div class="form-group">
@@ -100,12 +101,14 @@
                     </div>
                 </form>
 
-                <div class="input lists">
+                <div class="input lists students">
                     <h3>Student List</h3>
-                    <ul class="data student">
+                    <ul class="data students list">
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleStudentsList">Show Students</button>
+
                 <form id="students">
                 <h3>Student form</h3>
                 <div class="form-group">
@@ -136,12 +139,14 @@
             </section>
             <section class="formRow">
 
-                <div class="input lists">
+                <div class="input lists trainers">
                     <h3>Trainer List</h3>
-                    <ul class="data trainers">
+                    <ul class="data trainers list">
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleTrainersList">Show Trainers</button>
+
                 <form id="trainers" >
                     <h3>Trainer form</h3>
                     <div class="form-group">
@@ -166,11 +171,13 @@
                     </div>
                 </form>
 
-                <div class="input lists">
-                    <ul class="data assignments">
+                <div class="input lists assignments">
+                    <ul class="data assignments list">
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleAssignmentsList">Show Assignments</button>
+
                 <form id="assignments">
                     <h3>Assignments</h3>
                     <div class="form-group">
@@ -210,6 +217,7 @@
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleTrainersPerCourseList">Show Trainers Per Course</button>
                 <form id="trainersPerCourse" > 
                     <h2>Trainers Per Course</h2>
                     <h3>Trainer form</h3>
@@ -268,8 +276,10 @@
 
                     </ul>
                     </div>
+                <button class="btn lists" id="toggleStudentsPerCourseList">Show Students Per Course</button>
+
                 <form id="studentsPerCourse">
-                    <h2>Trainers Per Course</h2>
+                    <h2>Students Per Course</h2>
                     <h3>Student form</h3>
                     <div class="form-group">
                         <label for="studentFirstName">First Name</label>
@@ -336,6 +346,8 @@
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleAssignmentsPerCourseList">Show Assignments Per Course</button>
+
                 <form id="assignmentsPerCourse">
                     <h2>Assignments Per Course</h2>
                     <h3>Assignments</h3>
@@ -407,6 +419,7 @@
 
                     </ul>
                 </div>
+                <button class="btn lists" id="toggleAssignPerStudPerCourseList">Show Assignments per Student per Course</button>
                 <form id="assignmentsStudentCourse">
                     <h2>Assignments per Student per Course</h2>
                     <h3>Assignments</h3>

@@ -1,3 +1,16 @@
+/* 
+Ονομα: Μπανουσι Νεκταριος
+Τμημα: JavaScript, Coding Bootcamp 12
+
+Ως προς την εργασια:
+    Θα ηθελα να κανω κρυφες λιστες, διαφορετικες για καθε φορμα. 
+    Οι αρχικες 4 "μονες" φορμες θα ηταν για την εισαγωγη δεδομενων, ενω
+    οι 4 "μεικτες" θα ηταν για μερικη εισαγωγη και για συζευξη των δεδομενων που θα ειχαν εισαχθει πριν.
+    Οι λιστες θα αντλουσαν δεδομενα απο ενα κοινο array απο Objects για.
+*/
+
+
+
 // ------------> VARIABLES <------------
     // TRAINER
 let trainerId = 1;
@@ -11,8 +24,6 @@ let studentArray = [];
 let courseId = 1;
 let courseArray = [];
 
-=======
->>>>>>> Stashed changes
 
     // ASSIGNMENT
 let assignmentId = 1;
@@ -29,47 +40,75 @@ const toggleAssignments_CourseForm = document.getElementById("toggleAssignments_
 const toggleBigForm = document.getElementById("toggleBigForm");
 let message = document.querySelectorAll(".message");
 
-function addSubject () {
-    
-}
 
-// for Forms
+
+// Toggle Listeners
 const toggleTrainer = toggleTrainerForm.addEventListener("click", function(){ 
-    return toggleForm(trainers);
+    return toggleForm(trainers, toggleTrainersList);
 });
 const toggleStudent = toggleStudentForm.addEventListener("click", function(){ 
-    return toggleForm(students);
+    return toggleForm(students, toggleStudentsList);
 });
 const toggleCourses = toggleCoursesform.addEventListener("click", function(){ 
-    return toggleForm(courses);
+    return toggleForm(courses, toggleCoursesList);
 });
 const toggleAssignments = toggleAssingmentsform.addEventListener("click", function(){ 
-    return toggleForm(assignments);
+    return toggleForm(assignments, toggleAssignmentsList);
 });
 const toggleTrainer_Course = toggleTrainer_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(trainersPerCourse);
+    return toggleForm(trainersPerCourse, toggleTrainersPerCourseList);
 });
 const toggleStudent_Course = toggleStudent_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(studentsPerCourse);
+    return toggleForm(studentsPerCourse, toggleStudentsPerCourseList);
 });
 const toggleAssignments_Course = toggleAssignments_CourseForm.addEventListener("click", function(){ 
-    return toggleForm(assignmentsPerCourse);
+    return toggleForm(assignmentsPerCourse, toggleAssignmentsPerCourseList);
 });
 const toggleBig_Form = toggleBigForm.addEventListener("click", function(){ 
-    return toggleForm(assignmentsStudentCourse);
+    return toggleForm(assignmentsStudentCourse, toggleAssignPerStudPerCourseList);
 });
+
+// Toggle Lists
+
+const toggleCourseListBtn = toggleCoursesList.addEventListener('click', function () {
+    return toggleList(document.querySelector(".input.lists.courses"))
+});
+
+const toggleStudentsListBtn = toggleStudentsList.addEventListener('click', function () {
+    return toggleList(document.querySelector(".input.lists.students"))
+});
+const toggleTrainersListBtn = toggleTrainersList.addEventListener('click', function () {
+    return toggleList(document.querySelector(".input.lists.trainers"))
+});
+const toggleAssignmentsListBtn = toggleAssignmentsList.addEventListener('click', function () {
+    return toggleList(document.querySelector(".input.lists.assignments"))
+});
+
 
 
 // Toggle Function
-function toggleForm (form) {
+function toggleForm (form, btn) {
     if (form.style.display === "none" || form.style.display === "") {
         form.style.display = "block";
     } else {
         form.style.display = "none";
     }
+    if (btn.style.display === "none" || btn.style.display === "") {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
     form.addEventListener("submit", function(x) {
         x.preventDefault();
     })
+}
+
+function toggleList(list) {
+    if (list.style.display === "none" || list.style.display === "") {
+        list.style.display = "block";
+    } else {
+        list.style.display = "none";
+    }
 }
 
 
@@ -93,7 +132,7 @@ const newCourse = courses.addEventListener("submit", function(){
 
     let newLine = function() {
         thisEntry = courseId -1 ;
-        let ulData = document.querySelector(".data.list");
+        let ulData = document.querySelector(".data.courses.list");
         let entry = document.createElement("li");
         entry.append(`Course ID :${courseId} - Title: ${courseArray[thisEntry].courseTitle}, Stream: ${courseArray[thisEntry].courseStream}, Type: ${courseArray[thisEntry].courseType}. From ${courseArray[thisEntry].start_date} to ${courseArray[thisEntry].end_date} `);
         ulData.appendChild(entry);
@@ -109,7 +148,6 @@ const newTrainer = trainers.addEventListener("submit", function() {
         let addTrainer = function () {
             let trainer = new Trainer(trainers.trainerFirstName.value, trainers.trainerLastName.value, trainers.trainerSubject.value, trainerId);
             trainerArray.push(trainer);
-            subjectArray.push(trainers.trainerSubject.value)
             trainers.trainerFirstName.value = "";
             trainers.trainerLastName.value = "";
             trainers.trainerSubject.value = "";
@@ -121,7 +159,7 @@ const newTrainer = trainers.addEventListener("submit", function() {
     
     let newLine = function() {
         thisEntry = trainerId -1 ;
-        let ulData = document.querySelector(".data.list");
+        let ulData = document.querySelector(".data.trainers.list");
         let entry = document.createElement("li");
         entry.append(`Trainer ID: ${trainerId} - Name: ${trainerArray[thisEntry].trainerFirstName}, ${trainerArray[thisEntry].trainerLastName}. Subject: ${trainerArray[thisEntry].trainerSubject}`);
         ulData.appendChild(entry);
@@ -147,7 +185,7 @@ const newStudent = students.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = studentId -1 ;
-        let ulData = document.querySelector(".data.list");
+        let ulData = document.querySelector(".data.students.list");
         let entry = document.createElement("li");
         entry.append(`Student ID: ${studentId} - Name :${studentArray[thisEntry].studentFirstName}, ${studentArray[thisEntry].studentLastName}, born ${studentArray[thisEntry].dateOfBirth}. Tuition: ${studentArray[thisEntry].tuitionFees}€`);
         ulData.appendChild(entry);
@@ -174,7 +212,7 @@ const newAssignment = assignments.addEventListener("submit", function() {
 
     let newLine = function() {
         thisEntry = assignmentId -1 ;
-        let ulData = document.querySelector(".data.list");
+        let ulData = document.querySelector(".data.assignments.list");
         let entry = document.createElement("li");
         entry.append(`Assignment ID: ${assignmentId} - Title: ${assignmentArray[thisEntry].assignmentTitle}, Description: ${assignmentArray[thisEntry].assignmentDescription}, Submission Date ${assignmentArray[thisEntry].assignmentSubDate}. Oral mark: ${assignmentArray[thisEntry].assignmentOralMark}, Total Mark: ${assignmentArray[thisEntry].assignmentTotalMark}`);
         ulData.appendChild(entry);

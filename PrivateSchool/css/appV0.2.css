@@ -54,6 +54,7 @@ table {
 html {
     font-family: 'Open Sans', sans-serif;
     min-height: 100vh;
+    scroll-behavior: smooth;
 
 }
 
@@ -270,6 +271,7 @@ footer a:hover {
 html {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -471,11 +473,7 @@ section p, aside p {
     justify-content: right;
 }
 
-
-
-        
-            /* ----- FORMS ----- */
-
+/* Go to top button */
 #goTop {
     position: relative;
     right: -867px;
